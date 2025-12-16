@@ -1,9 +1,18 @@
 import React from 'react'
+import Navbar from '../../Components/Navbar.jsx'
+import Grid from '@mui/material/Grid';
+import Hero from './sections/Hero.jsx'
 
-const home = () => {
+const Home = () => {
   return (
-    <div>home</div>
+    <>
+      <Navbar />
+      <Hero />
+      <Grid sx={{height: '100vh'}}>
+        Hello World
+      </Grid>
+    </>
   )
 }
 
-export default home
+export default Home
