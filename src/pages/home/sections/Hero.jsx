@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import Grid from '@mui/material/Grid';
-import LandingSectionBackground from '../../../assets/backgrounds/LandingSectionBackground.mp4'
+import LandingSectionBackground from '../../../assets/backgrounds/landingSectionBackground.mp4'
 import { useMediaQuery } from '@mui/material';
 import landingSectionBackgroundPoster from '../../../assets/backgrounds/landingSectionBackgroundPoster.jpg'
 import { motion, useScroll, useTransform } from "framer-motion";
