@@ -1,6 +1,6 @@
 import React from 'react'
 import { Routes, Route, Navigate } from "react-router";
-import Home from './pages/Home/Home';
+import Home from './pages/home/home';
 
 const Router = () => {
   return (
