@@ -13,6 +13,7 @@ const Hero = () => {
   const { scrollY } = useScroll(); 
   const [vh, setVh] = useState(window.innerHeight);
   const y1 = useTransform(scrollY, [0, vh], [0, -1 * vh]); 
+  
   return (
     <motion.div style={{ y: y1}}>
       <Grid sx={{ position: 'absolute', zIndex: 1, right: 0, width: '100%', backgroundImage: `url(${landingSectionBackgroundPoster})` }} ref={heroRef}>
