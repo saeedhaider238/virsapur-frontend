@@ -15,7 +15,7 @@ const Hero = () => {
   const y1 = useTransform(scrollY, [0, vh], [0, -1 * vh]); 
   return (
     <motion.div style={{ y: y1}}>
-      <Grid sx={{ position: 'absolute', zIndex: 1, right: 0, width: '100%' }} ref={heroRef}>
+      <Grid sx={{ position: 'absolute', zIndex: 1, right: 0, width: '100%', backgroundImage: `url(${landingSectionBackgroundPoster})` }} ref={heroRef}>
         <Grid container sx={{ overflow: 'hidden', height: '100vh', position: 'relative' }}>
           <Grid item sx={{ overflow: 'hidden', display: 'flex', justifyContent: 'center', position: 'absolute', zIndex: '-1', width: '100%', height: '100%' }}>
             <video src={LandingSectionBackground} autoPlay loop muted style={{ width: '100%', minWidth: '1400px', objectFit: 'cover' }} poster={landingSectionBackgroundPoster} ></video>
