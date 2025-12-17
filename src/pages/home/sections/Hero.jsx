@@ -6,11 +6,9 @@ import landingSectionBackgroundPoster from '../../../assets/backgrounds/landingS
 import { motion, useScroll, useTransform } from "framer-motion";
 import { div } from 'framer-motion/client';
 
-const Hero = () => {
+const Hero = ({scrollY}) => {
   const isMobileScreen = useMediaQuery('(max-width: 470px)')
-  const scrollValue = useRef(0);
   const heroRef = useRef(null)
-  const { scrollY } = useScroll(); 
   const [vh, setVh] = useState(window.innerHeight);
   const y1 = useTransform(scrollY, [0, vh], [0, -1 * vh]); 
   

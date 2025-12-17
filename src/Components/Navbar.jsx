@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import Grid from '@mui/material/Grid';
 import VirsapurLogo from '../assets/Virsapur-Logo.png'
 import { Link } from 'react-router';
@@ -6,9 +6,25 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { Drawer, Button, List, ListItem, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
-const Navbar = () => {
+const Navbar = ({scrollY}) => {
   const isSmallScreen = useMediaQuery('(max-width: 860px)')
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [vh, setVh] = useState(window.innerHeight);
+  const [bgColor, setBgColor] = useState('transparent');
+
+  useEffect(() => {
+    const unsubscribe = scrollY.onChange((value) => {
+      console.log(value)
+      console.log(0.1 * vh)
+      if (value >= 0.45 * vh) {
+        setBgColor('black');
+      } else {
+        setBgColor('transparent');
+      }
+    });
+
+    return () => unsubscribe();
+  }, [scrollY, vh]);
 
   const list = () => (
     <List sx={{ width: 250 }}>
@@ -21,7 +37,7 @@ const Navbar = () => {
   );
 
   return (
-    <Grid container sx={{ width: '100%', position: 'fixed', padding: !isSmallScreen ? '0px 50px' : '0px 25px', display: 'flex', zIndex: 2, justifyContent: 'space-between', marginTop: '10px' }} spacing={2}>
+    <Grid container sx={{ width: '100%', position: 'fixed', padding: !isSmallScreen ? '10px 50px' : '10px 25px', backgroundColor: bgColor, display: 'flex', zIndex: 2, justifyContent: 'space-between', marginTop: '0px' }} spacing={2}>
       <Grid item>
         <img src={VirsapurLogo} alt="Virsapur" style={{ width: '120px', height: '80px' }} />
       </Grid>
