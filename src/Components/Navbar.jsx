@@ -23,7 +23,7 @@ const Navbar = ({scrollY}) => {
 
   useEffect(() => {
     const unsubscribe = scrollY.onChange((value) => {
-      if (value >= 0.45 * vh) {
+      if (value >= 0.4 * vh) {
         setBgColor('black');
       } else {
         setBgColor('transparent');

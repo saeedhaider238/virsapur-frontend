@@ -4,7 +4,6 @@ import LandingSectionBackground from '../../../assets/backgrounds/landingSection
 import { useMediaQuery } from '@mui/material';
 import landingSectionBackgroundPoster from '../../../assets/backgrounds/landingSectionBackgroundPoster.jpg'
 import { motion, useScroll, useTransform } from "framer-motion";
-import { div } from 'framer-motion/client';
 
 const Hero = ({scrollY}) => {
   const isMobileScreen = useMediaQuery('(max-width: 470px)')
