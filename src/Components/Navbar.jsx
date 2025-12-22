@@ -6,6 +6,15 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { Drawer, Button, List, ListItem, ListItemText } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 
+const menuItems = [
+  { text: "Home", path: "/home" },
+  { text: "Trails", path: "/trails" },
+  { text: "Workshops", path: "/workshops" },
+  { text: "Why Virsapur!", path: "/why-virsapur" },
+  { text: "Bookings", path: "/bookings" },
+  { text: "Blog", path: "/blog" },
+];
+
 const Navbar = ({scrollY}) => {
   const isSmallScreen = useMediaQuery('(max-width: 860px)')
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -26,9 +35,9 @@ const Navbar = ({scrollY}) => {
 
   const list = () => (
     <List sx={{ width: 250 }}>
-      {['Home', 'Trails', 'Workshops', 'Why Virsapur', 'Bookings', 'Blog'].map((text, index) => (
-        <ListItem button key={text}>
-          <ListItemText primary={text} />
+      {menuItems.map((item, index) => (
+        <ListItem component={Link} key={index} to={item.path} sx={{textDecoration: 'none', color: 'black'}}>
+          <ListItemText primary={item.text} />
         </ListItem>
       ))}
     </List>
@@ -41,12 +50,7 @@ const Navbar = ({scrollY}) => {
       </Grid>
       <Grid item sx={{ display: 'flex', alignItems: 'center' }}>
         {!isSmallScreen ? <Grid container spacing={5}>
-          <Grid item><Link to="/home" style={{ textDecoration: 'none', color: 'white', fontSize: '20px' }}>Home</Link></Grid>
-          <Grid item><Link style={{ textDecoration: 'none', color: 'white', fontSize: '20px' }}>Trails</Link></Grid>
-          <Grid item><Link style={{ textDecoration: 'none', color: 'white', fontSize: '20px' }}>Workshops</Link></Grid>
-          <Grid item><Link style={{ textDecoration: 'none', color: 'white', fontSize: '20px' }}>Why Virsapur!</Link></Grid>
-          <Grid item><Link style={{ textDecoration: 'none', color: 'white', fontSize: '20px' }}>Bookings</Link></Grid>
-          <Grid item><Link style={{ textDecoration: 'none', color: 'white', fontSize: '20px' }}>Blog</Link></Grid>
+          {menuItems.map((item, index)=>(<Grid item key={index}><Link to={item.path} style={{ textDecoration: 'none', color: 'white', fontSize: '20px' }}>{item.text}</Link></Grid>))}
         </Grid> : <Grid item>
           <Button sx={{color: 'white'}} onClick={() => setIsDrawerOpen(true)}>
             <MenuIcon fontSize='large'/>
