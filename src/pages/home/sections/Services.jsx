@@ -13,15 +13,14 @@ const Services = () => {
     const isMobileScreen = useMediaQuery('(max-width: 470px)');
 
     const settings = {
-    dots: true,           // Show navigation dots
-    infinite: true,       // Loop slides
-    speed: 500,           // Transition speed
-    slidesToShow: 4,      // Number of slides to show at once
-    slidesToScroll: 1,    // Number of slides to scroll
-    // autoplay: true,       // Enable autoplay
-    autoplaySpeed: 3000,  // Autoplay speed in ms
-    // adaptiveHeight: true,
-    responsive: [         // Responsive settings
+    dots: true,           
+    infinite: true,       
+    speed: 500,           
+    slidesToShow: 4,      
+    slidesToScroll: 1,    
+    autoplay: true,     
+    autoplaySpeed: 2000,  
+    responsive: [         
       {
         breakpoint: 1024,
         settings: {
@@ -58,31 +57,32 @@ const Services = () => {
                 gap: 20px !important;
             }
             `}</style>
-        <Grid container sx={{ marginTop: '100px', paddingBottom: '100px', justifyContent: 'center', backgroundImage: `url(${servicesSectionBackground})`, backgroundPosition: 'center', backgroundSize: 'cover' }}>
+        <Grid container sx={{ marginTop: '100px', paddingBottom: '70px', justifyContent: 'center', backgroundImage: `url(${servicesSectionBackground})`, backgroundPosition: 'center', backgroundSize: 'cover' }}>
             <Grid container sx={{ justifyContent: 'center' }} size={12} ><h1 style={{ letterSpacing: '4px', margin: '70px 0px', fontSize: !isMobileScreen ? '80px' : '45px', fontWeight: '100', textAlign: 'center'}}>OUR SERVICES</h1></Grid>
             <Grid sx={{ maxWidth: '1200px', overflow: 'hidden'}} >
                 <Slider {...settings}>
                     {[...servicesData, ...servicesData].map((slide, index) => (
                         <div key={index} style={{ padding: "10px",}}>
                             <img src={slide.image} alt={slide.title} style={{ width: "100%", borderRadius: "10px" }} />
-                            <h3 style={{textAlign: 'center', padding: '0px 10px'}}>{slide.title}</h3>
-                            <p style={{padding: '0px 10px'}}>
+                            <h3 style={{textAlign: 'center', padding: '0px 10px', fontFamily: "'Telegraph Sans', sans-serif"}}>{slide.title}</h3>
+                            <p style={{padding: '0px 10px', fontFamily: "sans-serif"}}>
                                 {slide.description.split(' ').slice(0, 20).join(' ')}
                                 {slide.description.split(' ').length > 20 ? '...' : ''}
                             </p>
                             <div style={{ textAlign: 'center', marginTop: '10px' }}>
                                 <Button
+                                    size='small'
                                     variant="outlined"
                                     color="primary"
-                                    component={RouterLink} // use this for internal routing
-                                    to={slide.path || '#'}  // your link from servicesData
+                                    component={RouterLink} 
+                                    to={slide.path || '#'}  
                                     sx={{
-                                        borderRadius: '8px', padding: '10px 20px', color: 'black',               // text color
-                                        borderColor: 'black',         // outline color
+                                        borderRadius: '0px', padding: '10px 20px', color: 'black',               
+                                        borderColor: 'black',        
                                         '&:hover': {
-                                            borderColor: 'black',       // keep border black on hover
-                                            backgroundColor: 'rgba(0,0,0,0.05)' // optional subtle hover background
-                                        }
+                                            borderColor: 'black',    
+                                            backgroundColor: 'rgba(0,0,0,0.05)' 
+                                        },
                                     }}
                                 >
                                     Read More

@@ -22,7 +22,7 @@ const Home = () => {
         <AboutUs/>
       </Grid>
       <Founders/>
-      {/* <Services /> */}
+      <Services />
 
       <Grid sx={{height: '120vh'}}>
         {/* Hello World */}

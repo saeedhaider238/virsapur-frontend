@@ -22,15 +22,20 @@ const Navbar = ({scrollY}) => {
   const [bgColor, setBgColor] = useState('transparent');
 
   useEffect(() => {
-    const unsubscribe = scrollY.onChange((value) => {
+    if(scrollY){
+      const unsubscribe = scrollY.onChange((value) => {
       if (value >= 0.4 * vh) {
         setBgColor('black');
       } else {
         setBgColor('transparent');
       }
+      return () => unsubscribe();
     });
-
-    return () => unsubscribe();
+    }
+    else{
+      setBgColor('Black')
+    }
+    
   }, [scrollY, vh]);
 
   const list = () => (

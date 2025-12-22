@@ -9,7 +9,7 @@ const Founders = () => {
   const isMobileScreen = useMediaQuery('(max-width: 470px)');
 
   return (
-    <Grid container sx={{backgroundImage: `url(${authorSectionBackground})`, height: 'auto', backgroundSize: 'cover', backgroundPosition: 'center', justifyContent: 'center', alignItems: 'center', padding: '0px'}}>
+    <Grid container sx={{backgroundImage: `url(${authorSectionBackground})`, height: 'auto', backgroundSize: 'cover', backgroundPosition: 'center', justifyContent: 'center', alignItems: 'center', padding: '0px 0px 70px 0px'}}>
       <Grid>
         <Grid container sx={{justifyContent: 'center'}}><h1 style={{letterSpacing: '4px', margin: '70px 0px', fontSize: !isMobileScreen ? '80px' : '45px', fontWeight: '100'}}>FOUNDERS</h1></Grid>
         {foundersData.map((founder, index) => {
