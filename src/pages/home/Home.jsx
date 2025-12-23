@@ -6,7 +6,7 @@ import AboutUs from './sections/AboutUs.jsx';
 import { useScroll } from 'framer-motion';
 import Founders from './sections/Founders.jsx';
 import Services from './sections/Services.jsx';
-import ProjectsTitle from './sections/projectsTitle.jsx';
+import ProjectsTitle from './sections/ProjectsTitle.jsx';
 import Projects from './sections/Projects.jsx';
 import PakistanMap from './sections/PakistanMap.jsx';
 import Heritage from './sections/Heritages.jsx';
