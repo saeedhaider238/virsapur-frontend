@@ -7,7 +7,7 @@ import Grid from '@mui/material/Grid';
 const Service = () => {
     const { servicePath } = useParams();
     const serviceData = servicesData.find(service => service.path === `/service/${servicePath}`)
-    console.log(serviceData)
+    
   return (
     <>
       <Navbar/>

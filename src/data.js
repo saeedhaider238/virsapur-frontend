@@ -8,6 +8,13 @@ import culturalEducationalWorkshops from './assets/services/culturalEducationalW
 import researchAndRestoration from './assets/services/researchAndRestoration.jpg'
 import collaborations from './assets/services/collaborations.jpg'
 
+// projects data
+import project1Image from './assets/projects/project1.png'
+import project2Image from './assets/projects/project2.png'
+
+//heritage data
+import DelhiGate from './assets/heritage/DelhiGate.png'
+
 //founders array
 const foundersData = [
     {
@@ -21,7 +28,7 @@ const foundersData = [
         designation: 'Co-founder',
         image: altamash,
         description: 'Altamash, co-founder of a prominent tech startup, is an innovative entrepreneur, software engineer, and public speaker recognized for his contributions to technology education and fostering startup ecosystems.'
-    }
+    },
 ]
 
 // services array
@@ -52,4 +59,50 @@ const servicesData = [
     },
 ]
 
-export {foundersData, servicesData}
+//projects array
+const projectsData = [
+    {
+        name: 'Project 1',
+        image: project1Image,
+        description: 'The Walled City Revitalization Initiative is a multi-layered conservation project aimed at restoring historical landmarks while empowering local craftsmen through sustainable urban tourism.'
+    },
+    {
+        name: 'Project 2',
+        image: project2Image,
+        description: 'The Walled City Revitalization Initiative is a multi-layered conservation project aimed at restoring historical landmarks while empowering local craftsmen through sustainable urban tourism.'
+    },
+    {
+        name: 'Project 3',
+        image: project1Image,
+        description: 'The Walled City Revitalization Initiative is a multi-layered conservation project aimed at restoring historical landmarks while empowering local craftsmen through sustainable urban tourism.'
+    },
+    {
+        name: 'Project 4',
+        image: project2Image,
+        description: 'The Walled City Revitalization Initiative is a multi-layered conservation project aimed at restoring historical landmarks while empowering local craftsmen through sustainable urban tourism.'
+    },
+]
+
+// heritage data
+const heritageData = [
+    {
+        name: 'Project 1',
+        image: DelhiGate,
+        description: 'The Walled City Revitalization Initiative is a multi-layered conservation project aimed at restoring historical landmarks while empowering local craftsmen through sustainable urban tourism.',
+        path: '/heritage/project1'
+    },
+    {
+        name: 'Project 2',
+        image: DelhiGate,
+        description: 'The Walled City Revitalization Initiative is a multi-layered conservation project aimed at restoring historical landmarks while empowering local craftsmen through sustainable urban tourism.',
+        path: '/heritage/project2'
+    },
+    {
+        name: 'Project 3',
+        image: DelhiGate,
+        description: 'The Walled City Revitalization Initiative is a multi-layered conservation project aimed at restoring historical landmarks while empowering local craftsmen through sustainable urban tourism.',
+        path: '/heritage/project3'
+    },
+]
+
+export {foundersData, servicesData, projectsData, heritageData}

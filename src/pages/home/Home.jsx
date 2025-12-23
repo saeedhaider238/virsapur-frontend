@@ -6,6 +6,10 @@ import AboutUs from './sections/AboutUs.jsx';
 import { useScroll } from 'framer-motion';
 import Founders from './sections/Founders.jsx';
 import Services from './sections/Services.jsx';
+import ProjectsTitle from './sections/projectsTitle.jsx';
+import Projects from './sections/Projects.jsx';
+import PakistanMap from './sections/PakistanMap.jsx';
+import Heritage from './sections/Heritages.jsx';
 
 const Home = () => {
   const { scrollY } = useScroll(); 
@@ -23,6 +27,10 @@ const Home = () => {
       </Grid>
       <Founders/>
       <Services />
+      <ProjectsTitle />
+      <Projects />
+      <PakistanMap />
+      <Heritage />
 
       <Grid sx={{height: '120vh'}}>
         {/* Hello World */}
