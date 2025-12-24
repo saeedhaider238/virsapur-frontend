@@ -3,7 +3,7 @@ import { Grid, TextField, Button, Link } from '@mui/material'
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { FaFacebook } from "react-icons/fa";
 import { IoLogoTiktok } from "react-icons/io5";
-import getInTouch3Background from '../../../assets/backgrounds/getInTouch3Background.png'
+import getInTouch3Background from '../../../assets/backgrounds/GetInTouch3Background.png'
 import getInTouch3SectionImage from '../../../assets/monuments/getInTouch3SectionImage.png'
 import {useMediaQuery} from '@mui/material';
 
