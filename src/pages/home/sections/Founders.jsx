@@ -15,7 +15,7 @@ const Founders = () => {
         const isEven = index % 2 === 0;
         return (
           <Grid container sx={{maxWidth: '1200px', gap: '0', flexDirection: isEven ? 'row' : 'row-reverse', flexWrap: 'wrap-reverse'}} key={index}>
-            <Grid item size={{xs: 12, md: 6}} sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '20px', fontFamily: "'TT Chocolates', sans-serif", ...(isSmallScreen && {paddingTop: '0px'})}}>
+            <Grid item size={{xs: 12, md: 6}} sx={{display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '20px', ...(isSmallScreen && {paddingTop: '0px'})}}>
               <h3 style={{marginBottom: '0px', fontSize: '25px'}}>{founder.name}</h3>
               <h3 style={{marginTop: '0px', fontSize: '25px'}}>{founder.designation}</h3>
               <p style={{fontSize: '20px', ...(isSmallScreen && {marginTop: '0px'})}}>{founder.description}</p>

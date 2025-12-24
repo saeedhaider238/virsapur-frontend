@@ -52,7 +52,6 @@ const Services = () => {
                 overflow: hidden;
                 border-radius: 20px;
                 margin-right: 4px;
-                height: 445px;
             }
             .servicesCarrouselContainer .slick-track {
                 display: flex !important;
@@ -61,13 +60,13 @@ const Services = () => {
             `}</style>
         <Grid container sx={{ marginTop: '100px', paddingBottom: '70px', justifyContent: 'center',}}>
             <Grid container sx={{ justifyContent: 'center' }} size={12} ><h1 style={{ letterSpacing: '4px', margin: '70px 0px', fontSize: !isMobileScreen ? '80px' : '45px', fontWeight: '100', textAlign: 'center'}}>OUR SERVICES</h1></Grid>
-            <Grid sx={{ maxWidth: '1200px', overflow: 'hidden'}} className='servicesCarrouselContainer' >
+            <Grid sx={{overflow: 'hidden'}} className='servicesCarrouselContainer' >
                 <Slider key={`${isMobileScreen}`} {...settings}>
                     {[...servicesData, ...servicesData].map((slide, index) => (
                         <div key={index} style={{ padding: "10px",}}>
                             <img src={slide.image} alt={slide.title} style={{ width: "100%", borderRadius: "10px" }} />
-                            <h3 style={{textAlign: 'center', padding: '0px 10px', fontFamily: "'Montserrat', sans-serif",}}>{slide.title}</h3>
-                            <p style={{padding: '0px 10px', fontFamily: "sans-serif"}}>
+                            <h3 style={{textAlign: 'center', padding: '0px 10px', height: '40px'}}>{slide.title}</h3>
+                            <p style={{padding: '0px 10px'}}>
                                 {slide.description.slice(0, 100)}
                                 {slide.description.length > 100 ? '...' : ''}
                             </p>
@@ -80,7 +79,8 @@ const Services = () => {
                                     to={slide.path || '#'}  
                                     sx={{
                                         borderRadius: '0px', padding: '10px 20px', color: 'black',               
-                                        borderColor: 'black',        
+                                        borderColor: 'black',   
+                                        marginBottom: '20px',     
                                         '&:hover': {
                                             borderColor: 'black',    
                                             backgroundColor: 'rgba(0,0,0,0.05)' 

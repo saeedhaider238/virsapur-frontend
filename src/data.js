@@ -15,6 +15,10 @@ import project2Image from './assets/projects/project2.png'
 //heritage data
 import DelhiGate from './assets/heritage/DelhiGate.png'
 
+//feedback data
+import feedback1 from './assets/feedback/feedback1.png'
+import feedback2 from './assets/feedback/feedback2.png'
+
 //founders array
 const foundersData = [
     {
@@ -105,4 +109,60 @@ const heritageData = [
     },
 ]
 
-export {foundersData, servicesData, projectsData, heritageData}
+// feedback data
+const feedbackData = [
+    {
+        name: 'Burnt Brains Team',
+        image: feedback1,
+        review: 'The tour team was professional, friendly, and made the entire experience seamless and enjoyable.',
+        path: '/heritage/project1'
+    },
+    {
+        name: 'Burnt Brains Team',
+        image: feedback2,
+        review: 'The tour team was professional, friendly, and made the entire experience seamless and enjoyable.',
+        path: '/heritage/project2'
+    },
+    {
+        name: 'Burnt Brains Team',
+        image: feedback1,
+        review: 'The tour team was professional, friendly, and made the entire experience seamless and enjoyable.',
+        path: '/heritage/project3'
+    },
+    {
+        name: 'Burnt Brains Team',
+        image: feedback2,
+        review: 'The tour team was professional, friendly, and made the entire experience seamless and enjoyable.',
+        path: '/heritage/project3'
+    },
+]
+
+// collaborators data
+const collaboratorsData = [
+    {
+        name: 'Burnt Brains Team',
+        image: feedback1,
+        review: 'The tour team was professional, friendly, and made the entire experience seamless and enjoyable.',
+        path: '/heritage/project1'
+    },
+    {
+        name: 'Burnt Brains Team',
+        image: feedback2,
+        review: 'The tour team was professional, friendly, and made the entire experience seamless and enjoyable.',
+        path: '/heritage/project2'
+    },
+    {
+        name: 'Burnt Brains Team',
+        image: feedback1,
+        review: 'The tour team was professional, friendly, and made the entire experience seamless and enjoyable.',
+        path: '/heritage/project3'
+    },
+    {
+        name: 'Burnt Brains Team',
+        image: feedback2,
+        review: 'The tour team was professional, friendly, and made the entire experience seamless and enjoyable.',
+        path: '/heritage/project3'
+    },
+]
+
+export {foundersData, servicesData, projectsData, heritageData, feedbackData, collaboratorsData}

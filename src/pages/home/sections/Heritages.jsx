@@ -44,7 +44,7 @@ const Heritage = () => {
                 background-color: #1979b8;
                 overflow: hidden;
                 margin-right: 5px;
-                height: 450px;
+                // height: 450px;
             }
             .heritageCarrouselContainer .slick-track {
                 display: flex !important;
@@ -56,9 +56,9 @@ const Heritage = () => {
             `}</style>
 
             <Grid container sx={{ backgroundColor: '#fffdf7', marginTop: '100px', justifyContent: 'center', paddingBottom: '70px', }}>
-                <Grid style={{ justifyContent: 'center', padding: '0px'}} size={12} ><h1 style={{ letterSpacing: '4px', fontSize: !isMobileScreen ? '80px' : '42px', fontWeight: '100', textAlign: 'center', marginTop: '70px' }}>Heritage of Our Land</h1></Grid>
+                <Grid style={{ justifyContent: 'center', padding: '0px'}} size={12} ><h1 style={{ letterSpacing: '4px', fontSize: !isMobileScreen ? '80px' : '45px', fontWeight: '100', textAlign: 'center', marginTop: '70px' }}>Heritage of Our Land</h1></Grid>
 
-                <Grid container sx={{width: '100%', overflow: 'hidden', justifyContent: 'center', maxWidth: '1200px'}}>
+                <Grid container sx={{width: '100%', overflow: 'hidden', justifyContent: 'center',}}>
                     <Grid className='heritageCarrouselContainer' sx={{width: '80%'}}>
                     <Slider key={`${isMobileScreen}`} {...settings}>
                         {[...heritageData, ...heritageData].map((slide, index) => (
@@ -70,8 +70,8 @@ const Heritage = () => {
                                         style={{ width: "100%", display: 'block' }}
                                     />
                                 </div>
-                                <h3 style={{ textAlign: 'center', padding: '0px 10px', fontFamily: "'Montserrat', sans-serif", }}>{slide.name}</h3>
-                                <p style={{ padding: '0px 10px', fontFamily: "sans-serif" }}>
+                                <h3 style={{ textAlign: 'center', padding: '0px 10px' }}>{slide.name}</h3>
+                                <p style={{ padding: '0px 10px' }}>
                                     {slide.description.slice(0, 100)}
                                     {slide.description.length > 100 ? '...' : ''}
                                 </p>
@@ -85,6 +85,7 @@ const Heritage = () => {
                                         sx={{
                                             borderRadius: '0px', padding: '10px 20px', color: 'black',
                                             borderColor: 'black',
+                                            marginBottom: '20px',
                                             '&:hover': {
                                                 borderColor: 'black',
                                                 backgroundColor: 'rgba(0,0,0,0.05)'
