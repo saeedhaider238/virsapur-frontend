@@ -1,6 +1,6 @@
 import React from 'react'
 import { Grid, TextField, Button, Link } from '@mui/material'
-import getInTouchBackground from '../../../assets/backgrounds/getInTouch2Background.png'
+import getInTouchBackground from '../../../assets/backgrounds/GetInTouch2Background.png'
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { FaFacebook } from "react-icons/fa";
 import { IoLogoTiktok } from "react-icons/io5";
