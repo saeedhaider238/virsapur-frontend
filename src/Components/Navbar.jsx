@@ -49,7 +49,7 @@ const Navbar = ({scrollY}) => {
   );
 
   return (
-    <Grid container sx={{ width: '100%', position: 'fixed', padding: !isSmallScreen ? '10px 50px' : '10px 25px', backgroundColor: bgColor, display: 'flex', zIndex: 2, justifyContent: 'space-between', marginTop: '0px' }} spacing={2}>
+    <Grid container sx={{ width: '100%', position: 'fixed', padding: !isSmallScreen ? '10px 50px' : '10px 25px', backgroundColor: bgColor, display: 'flex', zIndex: 100, justifyContent: 'space-between', marginTop: '0px' }} spacing={2}>
       <Grid item>
         <img src={VirsapurLogo} alt="Virsapur" style={{ width: '120px', height: '80px' }} />
       </Grid>
