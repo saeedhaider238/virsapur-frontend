@@ -66,7 +66,7 @@ const Services = () => {
                         <div key={index} style={{ padding: "10px",}}>
                             <img src={slide.image} alt={slide.title} style={{ width: "100%", borderRadius: "10px" }} />
                             <h3 style={{textAlign: 'center', padding: '0px 10px', height: '40px'}}>{slide.title}</h3>
-                            <p style={{padding: '0px 10px'}}>
+                            <p style={{padding: '0px 10px', minHeight: '54px'}}>
                                 {slide.description.slice(0, 100)}
                                 {slide.description.length > 100 ? '...' : ''}
                             </p>

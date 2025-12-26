@@ -40,11 +40,10 @@ const Home = () => {
       <Collaborators />
       <GetInTouch />
       <GetInTouch2 />
-      {/* <GetInTouch3 /> */}
+      <GetInTouch3 />
 
-      <Grid sx={{height: '120vh'}}>
-        {/* Hello World */}
-      </Grid>
+      {/* <Grid sx={{height: '120vh'}}>
+      </Grid> */}
     </>
   )
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Grid, TextField, Button, Link } from '@mui/material'
 import getInTouchBackground from '../../../assets/backgrounds/GetInTouchBackground.png'
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -6,6 +6,44 @@ import { FaFacebook } from "react-icons/fa";
 import { IoLogoTiktok } from "react-icons/io5";
 
 const GetInTouch = () => {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: ''
+    })
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+
+        if (name === "message" && value.split(" ").length > 200) {
+            return;
+        }
+        // console.log(name, value)
+        setFormData((prevData) => ({ ...prevData, [name]: value }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        if (!formData.name) {
+            alert("Name is required");
+            return;
+        }
+
+        if (!formData.email || !emailPattern.test(formData.email)) {
+            alert("Please enter a valid email address");
+            return;
+        }
+
+        if (formData.message.split(" ").length > 200) {
+            alert("Message cannot be more than 200 words");
+            return;
+        }
+
+        console.log('Data: ', formData)
+    };
+
     return (
         <Grid container sx={{ marginTop: '100px', justifyContent: 'center', backgroundImage: `url(${getInTouchBackground})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center bottom' }}>
             <Grid container sx={{ width: '100%', maxWidth: '1200px', padding: '70px 20px 250px 20px' }} >
@@ -56,7 +94,7 @@ const GetInTouch = () => {
                 <Grid size={{ xs: 12, sm: 12, md: 6 }} sx={{ backgroundColor: '#52576d', padding: '30px', marginTop: '40px', borderRadius: '15px', border: '2px solid black' }}>
                     <h3 style={{ color: 'white', marginTop: '0px', }}>Contact US</h3>
                     <Grid container spacing={3}>
-                        <TextField id="outlined-basic" label="Name" variant="outlined" sx={{
+                        <TextField id="outlined-basic" label="Name" name='name' onChange={handleChange} variant="outlined" sx={{
                             width: '100%', "& .MuiOutlinedInput-root": {
                                 "& fieldset": {
                                     borderColor: "white",
@@ -78,7 +116,7 @@ const GetInTouch = () => {
                                 color: "white",
                             },
                         }} />
-                        <TextField id="outlined-basic" label="Email address" variant="outlined" sx={{
+                        <TextField id="outlined-basic" label="Email address" name='email' onChange={handleChange} variant="outlined" sx={{
                             width: '100%', "& .MuiOutlinedInput-root": {
                                 "& fieldset": {
                                     borderColor: "white",
@@ -100,7 +138,7 @@ const GetInTouch = () => {
                                 color: "white",
                             },
                         }} />
-                        <TextField id="outlined-basic" label="Leave a message" rows={2} multiline variant="outlined" sx={{
+                        <TextField id="outlined-basic" label="Leave a message" name='message' onChange={handleChange} rows={2} multiline variant="outlined" sx={{
                             width: '100%', "& .MuiOutlinedInput-root": {
                                 "& fieldset": {
                                     borderColor: "white",
@@ -129,7 +167,7 @@ const GetInTouch = () => {
                             },
                         }} />
                         <Grid sx={{ width: '100%', }}>
-                            <Button variant="contained" sx={{ width: '100%', backgroundColor: 'white', color: 'black', fontWeight: 600, borderRadius: '20px', marginTop: '40px' }}>Submit</Button>
+                            <Button variant="contained" onClick={handleSubmit} sx={{ width: '100%', backgroundColor: 'white', color: 'black', fontWeight: 600, borderRadius: '20px', marginTop: '40px' }}>Submit</Button>
                         </Grid>
                     </Grid>
                 </Grid>
