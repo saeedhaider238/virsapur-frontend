@@ -165,4 +165,36 @@ const collaboratorsData = [
     },
 ]
 
-export {foundersData, servicesData, projectsData, heritageData, feedbackData, collaboratorsData}
+// trails data
+const trailsData = [
+    {
+        name: 'Trail 1',
+        image: project1Image,
+        shortDescription: 'Masjid Wazir Khan is a historic Mughal-era mosque in Lahore, known for its vibrant tilework and beauty.',
+        path: '/trail/trail1Name',
+        pricing: '10000 - 20000'
+    },
+    {
+        name: 'Trail 2',
+        image: project2Image,
+        shortDescription: 'Masjid Wazir Khan is a historic Mughal-era mosque in Lahore, known for its vibrant tilework and beauty.',
+        path: '/trail/trail2Name',
+        pricing: '10000 - 20000'
+    },
+    {
+        name: 'Trail 3',
+        image: project1Image,
+        shortDescription: 'Masjid Wazir Khan is a historic Mughal-era mosque in Lahore, known for its vibrant tilework and beauty.',
+        path: '/trail/trail3Name',
+        pricing: '10000 - 20000'
+    },
+    {
+        name: 'Trail 4',
+        image: project2Image,
+        shortDescription: 'Masjid Wazir Khan is a historic Mughal-era mosque in Lahore, known for its vibrant tilework and beauty.',
+        path: '/trail/trail4Name',
+        pricing: '10000 - 20000'
+    },
+]
+
+export {foundersData, servicesData, projectsData, heritageData, feedbackData, collaboratorsData, trailsData}

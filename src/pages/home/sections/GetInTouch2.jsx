@@ -4,7 +4,6 @@ import getInTouchBackground from '../../../assets/backgrounds/GetInTouch2Backgro
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { FaFacebook } from "react-icons/fa";
 import { IoLogoTiktok } from "react-icons/io5";
-import footerBackground from '../../../assets/backgrounds/footerBackground.png'
 
 const GetInTouch2 = () => {
     const [formData, setFormData] = useState({
@@ -46,7 +45,7 @@ const GetInTouch2 = () => {
 
     return (
         <Grid container sx={{ marginTop: '100px', justifyContent: 'center', backgroundImage: `url(${getInTouchBackground})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center bottom', position: 'relative', overflow: 'hidden' }}>
-            <Grid container sx={{ width: '100%', maxWidth: '1200px', padding: '70px 20px 250px 20px', zIndex: 10 }} >
+            <Grid container sx={{ width: '100%', maxWidth: '1200px', padding: '70px 20px 320px 20px', zIndex: 10 }} >
                 <Grid size={{ xs: 12, sm: 12, md: 6 }}>
                     <Grid sx={{ backgroundColor: '#52576d', width: 'auto', display: 'inline-block', padding: '0px 30px', borderRadius: '20px' }}>
                         <h1 style={{ fontWeight: '100', color: 'white' }}>GET IN TOUCH</h1>
@@ -171,9 +170,6 @@ const GetInTouch2 = () => {
                         </Grid>
                     </Grid>
                 </Grid>
-            </Grid>
-            <Grid container sx={{position: 'absolute', width: '100%', bottom: 0, alignItems: 'flex-end', zIndex: 1, minWidth: '1430px' }}>
-                <img src={footerBackground} alt="" style={{width: '100%'}} />
             </Grid>
         </Grid>
     )
