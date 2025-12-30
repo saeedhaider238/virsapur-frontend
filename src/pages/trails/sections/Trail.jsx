@@ -1,11 +1,15 @@
 import React, { useEffect } from 'react'
 import Grid from '@mui/material/Grid';
-import { useMediaQuery, Button } from '@mui/material';
+import { useMediaQuery} from '@mui/material';
 import { trailsData } from '../../../data';
 import { Link } from 'react-router';
 
 const AboutUs = () => {
   const isSmallScreen = useMediaQuery('(max-width: 470px)');
+
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  }, [])
 
   return (
     <Grid container sx={{ minHeight: '100vh', padding: '150px 20px 150px 20px', display: 'flex', justifyContent: 'space-between', maxWidth: '1200px', alignItems: 'center' }} spacing={6} >
@@ -18,7 +22,7 @@ const AboutUs = () => {
                             <Grid item size={{ xs: 12, md: 6 }} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: '20px', ...(isSmallScreen && { paddingTop: '0px' }) }}>
                                 <h3 style={{ marginBottom: isSmallScreen ? '25px' : '0px', fontSize: '25px', fontFamily: "Times New Roman"}}>{trail.name}</h3>
                                 <p style={{ fontSize: '20px', ...(isSmallScreen && { marginTop: '0px' }) }}>{trail.shortDescription}</p>
-                                <Button variant="contained" component={Link} to={trail.path} sx={{width: 'fit-content', borderRadius: '25px', backgroundColor: 'black'}}>view trail</Button>
+                                <Link to={trail.path} style={{width: 'fit-content', borderRadius: '25px', backgroundColor: 'black', padding: '10px 20px', color: 'white', textDecoration: 'none', fontSize: '18px'}}>view trail</Link>
                             </Grid>
 
                             <Grid item size={{ xs: 12, md: 6 }}>

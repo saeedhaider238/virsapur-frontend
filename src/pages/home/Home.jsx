@@ -19,9 +19,9 @@ import GetInTouch3 from './sections/GetInTouch3.jsx';
 const Home = () => {
   const { scrollY } = useScroll(); 
 
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []); 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []); 
 
   return (
     <>

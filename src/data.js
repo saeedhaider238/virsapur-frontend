@@ -19,6 +19,10 @@ import DelhiGate from './assets/heritage/DelhiGate.png'
 import feedback1 from './assets/feedback/feedback1.png'
 import feedback2 from './assets/feedback/feedback2.png'
 
+// workshop data
+import Workshop1 from './assets/workshops/Workshop1.png'
+import Workshop2 from './assets/workshops/Workshop2.png'
+
 //founders array
 const foundersData = [
     {
@@ -197,4 +201,103 @@ const trailsData = [
     },
 ]
 
-export {foundersData, servicesData, projectsData, heritageData, feedbackData, collaboratorsData, trailsData}
+// workshop data
+const workshopData = [
+    {
+        title: "Creative Photography Basics",
+        description: "Learn the fundamentals of photography including lighting, framing, and composition.",
+        detailedDescription: "This workshop covers the essential skills every budding photographer needs. You will learn about different types of cameras, lenses, lighting techniques, composition rules, and post-processing basics. By the end of the session, you'll have the confidence to capture stunning photos in various settings.",
+        duration: "3 Hours • 12 Jan 2025",
+        price: "PKR 3,500",
+        path: "/workshop/creative-photography-basics",
+        image: Workshop1,
+        galleryImages: [
+            { original: Workshop1, thumbnail: Workshop1 },
+            { original: feedback1, thumbnail: feedback1 },
+            { original: feedback2, thumbnail: feedback2 },
+        ],
+        learningObjectives: [
+            "Understand basic camera settings and functions",
+            "Learn composition rules and framing techniques",
+            "Explore different lighting setups",
+            "Practice post-processing basics"
+        ],
+        activitiesIncluded: [
+            "Hands-on photography exercises",
+            "Lighting setup practice",
+            "Photo editing session",
+            "Group critique and feedback"
+        ],
+        upcomingDates: [
+            "12 Jan 2025",
+            "20 Feb 2025",
+            "15 Mar 2025"
+        ]
+    },
+    {
+        title: "UI/UX Design Essentials",
+        description: "Understand design principles, user flows, and wireframing techniques for modern apps.",
+        detailedDescription: "Dive into the world of user interface and user experience design. This workshop will teach you how to create intuitive, visually appealing designs, develop user personas, map user journeys, and build wireframes and prototypes. Perfect for anyone looking to start a career in digital product design.",
+        duration: "5 Hours • 18 Jan 2025",
+        price: "PKR 5,000",
+        path: "/workshop/ui-ux-design-essentials",
+        image: Workshop2,
+        galleryImages: [
+            { original: Workshop2, thumbnail: Workshop2 },
+            { original: feedback1, thumbnail: feedback1 },
+            { original: feedback2, thumbnail: feedback2 },
+        ],
+        learningObjectives: [
+            "Understand fundamental UI/UX principles",
+            "Create user personas and user journeys",
+            "Design wireframes and interactive prototypes",
+            "Learn best practices for mobile and web interfaces"
+        ],
+        activitiesIncluded: [
+            "Wireframing exercises",
+            "UI mockup creation",
+            "User persona development",
+            "Interactive prototype building"
+        ],
+        upcomingDates: [
+            "18 Jan 2025",
+            "25 Feb 2025",
+            "10 Mar 2025"
+        ]
+    },
+    {
+        title: "Frontend Development Bootcamp",
+        description: "Hands-on workshop covering HTML, CSS, JavaScript, and React basics.",
+        detailedDescription: "A practical bootcamp for aspiring web developers. You will learn the core technologies of frontend development, including HTML, CSS, and JavaScript. The workshop also introduces React, enabling you to build interactive web applications. By the end, you'll be able to create your own responsive websites and simple web apps from scratch.",
+        duration: "2 Days • 25–26 Jan 2025",
+        price: "PKR 8,000",
+        path: "/workshop/frontend-development-bootcamp",
+        image: Workshop1,
+        galleryImages: [
+            { original: Workshop1, thumbnail: Workshop1 },
+            { original: feedback1, thumbnail: feedback1 },
+            { original: feedback2, thumbnail: feedback2 },
+        ],
+        learningObjectives: [
+            "Learn HTML, CSS, and JavaScript fundamentals",
+            "Build responsive web pages",
+            "Understand React basics and component structure",
+            "Develop simple interactive web applications"
+        ],
+        activitiesIncluded: [
+            "Hands-on coding exercises",
+            "Build a small web project",
+            "React component practice",
+            "Debugging and problem-solving sessions"
+        ],
+        upcomingDates: [
+            "25–26 Jan 2025",
+            "15–16 Feb 2025",
+            "5–6 Mar 2025"
+        ]
+    }
+];
+
+
+
+export {foundersData, servicesData, projectsData, heritageData, feedbackData, collaboratorsData, trailsData, workshopData}
