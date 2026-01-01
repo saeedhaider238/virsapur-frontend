@@ -7,6 +7,7 @@ import Trails from './pages/trails/Trails';
 import Trail from './pages/trail/Trail';
 import Workshops from './pages/workshops/Workshops';
 import Workshop from './pages/workshop/Workshop';
+import WhyVirsapur from './pages/whyvirsapur/WhyVirsapur'
 
 const Router = () => {
   return (
@@ -15,6 +16,7 @@ const Router = () => {
       <Route path="/home" element={<Home />} />
       <Route path="/trails" element={<Trails />} />
       <Route path="/workshops" element={<Workshops />} />
+      <Route path="/why-virsapur" element={<WhyVirsapur />} />
       <Route path="/service/:servicePath" element={<Service />} />
       <Route path="/heritage/:heritagePath" element={<Heritage />} />
       <Route path='/trail/:trailPath' element={<Trail />} />
