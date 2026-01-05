@@ -29,10 +29,6 @@ const WhyVirsapur = () => {
             <WhatMakesUsDifferent />
             <OurImpact />
             <PhotoCollage />
-            
-            <div style={{ height: '100vh', width: '100%' }}>
-                
-            </div>
         </>
     )
 }

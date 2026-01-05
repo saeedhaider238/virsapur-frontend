@@ -37,9 +37,9 @@ const Home = () => {
       <PakistanMap />
       <Heritage />
       <Feedback />
-      <Collaborators />
+      <Collaborators /> 
       <GetInTouch />
-      <GetInTouch2 />
+      <GetInTouch2 /> 
       <GetInTouch3 />
 
       {/* <Grid sx={{height: '120vh'}}>

@@ -16,7 +16,8 @@ const WhoWeAre = () => {
                         sx={{
                             maxWidth: 320,
                             borderRadius: "24px",
-                            backgroundColor: "#2D7FB8",
+                            // backgroundColor: "#2D7FB8",
+                            border: '2px solid black',
                             color: "#fff",
                             overflow: "hidden",
                             padding: 3,
@@ -79,7 +80,8 @@ const WhoWeAre = () => {
                         sx={{
                             maxWidth: 320,
                             borderRadius: "24px",
-                            backgroundColor: "#9697a9",
+                            // backgroundColor: "#9697a9",
+                            border: '2px solid black',
                             color: "#fff",
                             overflow: "hidden",
                             padding: 3,

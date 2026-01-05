@@ -48,7 +48,8 @@ const Services = () => {
         <>
             <style>{
             `.servicesCarrouselContainer .slick-slide > div {
-                background-color: #1979b8;
+                // background-color: #1979b8;
+                border: 2px solid black;
                 overflow: hidden;
                 border-radius: 20px;
                 margin-right: 4px;

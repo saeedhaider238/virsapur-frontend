@@ -41,7 +41,8 @@ const Heritage = () => {
         <>
             <style>{
             `.heritageCarrouselContainer .slick-slide > div {
-                background-color: #1979b8;
+                // background-color: #1979b8;
+                border: 2px solid black;
                 overflow: hidden;
                 margin-right: 5px;
                 // height: 450px;
