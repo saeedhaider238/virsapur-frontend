@@ -4,21 +4,20 @@ import OurMissionAndVisionImage from '../../../assets/why-virsapur/OurMissionAnd
 
 const MissionAndVision = () => {
     const isSmallScreen = useMediaQuery('(max-width: 470px)');
-    const isMobileScreen = useMediaQuery('(max-width: 470px)');
 
     return (
         <>
-            <Grid container sx={{ backgroundColor: '#ecf0f1', justifyContent: 'center', marginTop: '100px' }}>
+            <Grid container sx={{ backgroundColor: '#ecf0f1', justifyContent: 'center', marginTop: '100px', }}>
                 <Grid sx={{ maxWidth: '1200px' }} size={12}>
                     <Grid container sx={{ justifyContent: 'center' }}>
                         <Grid sx={{ width: '100%' }}>
-                            <h1 style={{ letterSpacing: '4px', margin: '90px 0px', fontSize: !isMobileScreen ? '60px' : '35px', fontWeight: '100', textAlign: 'left', padding: '0px 20px' }}>OUR MISSION AND VISION</h1>
+                            <h1 style={{ letterSpacing: '4px', margin: '90px 0px', fontSize: !isSmallScreen ? '60px' : '35px', fontWeight: '100', textAlign: 'left', padding: '0px 20px' }}>OUR MISSION AND VISION</h1>
                         </Grid>
                     </Grid>
                 </Grid>
             </Grid>
 
-            <Grid container sx={{ justifyContent: 'center' }}>
+            <Grid container sx={{ justifyContent: 'center', paddingBottom: '70px' }}>
                 <Grid container sx={{ maxWidth: '1200px' }} size={12} spacing={3}>
                     <Grid size={{ xs: 12, sm: 12, md: 6 }} sx={{ padding: '0px 20px' }}>
                         <p style={{ fontSize: !isSmallScreen ? '21px' : '15px' }}>
