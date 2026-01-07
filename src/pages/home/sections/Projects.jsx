@@ -7,7 +7,7 @@ const Projects = () => {
     const isSmallScreen = useMediaQuery('(max-width: 900px)');
 
     return (
-        <Grid container sx={{ marginTop: '100px', justifyContent: 'center', paddingTop: '70px' }}>
+        <Grid container sx={{ marginTop: '100px', justifyContent: 'center', paddingTop: '65vh' }}>
             <Grid>
                 {projectsData.map((project, index) => {
                     const isEven = index % 2 === 0;

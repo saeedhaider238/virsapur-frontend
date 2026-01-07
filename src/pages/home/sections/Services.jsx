@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import Grid from '@mui/material/Grid';
 import { useMediaQuery } from '@mui/material';
 import Slider from "react-slick";
@@ -7,11 +7,23 @@ import "slick-carousel/slick/slick-theme.css";
 import { servicesData } from '../../../data';
 import { Button } from '@mui/material';
 import { Link as RouterLink } from 'react-router'; 
+import { useInView } from "framer-motion";
 
 const Services = () => {
     const isMobileScreen = useMediaQuery('(max-width: 470px)');
     const screenWidth = window.innerWidth
     const slidesToShowOnScreen = useRef(screenWidth < 460 ? 1 : screenWidth < 600 ? 2 : screenWidth < 1024 ? 3 : 4)
+    const ref = useRef(null);
+    
+    const isInView = useInView(ref, { amount: 1, once: false });
+
+  //   useEffect(() => {
+  //   if (isInView) {
+  //     console.log("Element is in view ✅");
+  //   } else {
+  //     console.log("Element is out of view ❌");
+  //   }
+  // }, [isInView]);
     
     const settings = {
     dots: true,           
@@ -59,9 +71,9 @@ const Services = () => {
                 gap: 20px !important;
             }
             `}</style>
-        <Grid container sx={{ marginTop: '100px', paddingBottom: '70px', justifyContent: 'center',}}>
+          <Grid container sx={{ marginTop: '100px', paddingBottom: '70px', justifyContent: 'center',}}  ref={ref}>
             <Grid container sx={{ justifyContent: 'center' }} size={12} ><h1 style={{ letterSpacing: '4px', margin: '70px 0px', fontSize: !isMobileScreen ? '80px' : '45px', fontWeight: '100', textAlign: 'center'}}>OUR SERVICES</h1></Grid>
-            <Grid sx={{overflow: 'hidden'}} className='servicesCarrouselContainer' >
+            <Grid sx={{overflow: 'hidden', zIndex: isInView ? 2 : -1}} className='servicesCarrouselContainer'>
                 <Slider key={`${isMobileScreen}`} {...settings}>
                     {[...servicesData, ...servicesData].map((slide, index) => (
                         <div key={index} style={{ padding: "10px",}}>

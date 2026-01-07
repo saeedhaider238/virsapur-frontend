@@ -27,20 +27,20 @@ const Home = () => {
     <>
       <Navbar scrollY={scrollY} />
       <Hero scrollY={scrollY} />
-      <Grid sx={{paddingTop: '50vh', display: 'flex', justifyContent: 'center'}}>
-        <AboutUs/>
+      <Grid sx={{paddingTop: '50vh', display: 'flex', justifyContent: 'center', flexDirection: 'column',}}>
+        <AboutUs scrollY={scrollY}/>
+        <Founders scrollY={scrollY}/>
       </Grid>
-      <Founders/>
-      <Services />
-      <ProjectsTitle />
-      <Projects />
-      <PakistanMap />
-      <Heritage />
-      <Feedback />
-      <Collaborators /> 
-      <GetInTouch />
-      <GetInTouch2 /> 
-      <GetInTouch3 />
+        <Services />
+        <ProjectsTitle scrollY={scrollY} />
+        <Projects />
+        <PakistanMap />
+        <Heritage />
+        <Feedback />
+        <Collaborators /> 
+        <GetInTouch />
+        <GetInTouch2 /> 
+        <GetInTouch3 />
 
       {/* <Grid sx={{height: '120vh'}}>
       </Grid> */}

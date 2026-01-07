@@ -1,14 +1,21 @@
-import React, { useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import Grid from '@mui/material/Grid';
 import historicalPlace from '../../../assets/monuments/historicalPlace.png'
 import { useMediaQuery } from '@mui/material';
 import Box from '@mui/material/Box';
+// import { motion, useTransform } from "framer-motion";
+import { useTransform, motion } from "framer-motion";
 
-const AboutUs = () => {
+const AboutUs = ({scrollY}) => {
   const isSmallScreen = useMediaQuery('(max-width: 470px)');
+  const [vh, setVh] = useState(window.innerHeight);
+  const y = useTransform(scrollY, [vh/2, vh], [0, -1 * vh]); 
+  
 
   return (
-    <Grid container sx={{ minHeight: '100vh', padding: '150px 20px 70px 20px', display: 'flex', justifyContent: 'space-between', maxWidth: '1200px', alignItems: 'center' }} spacing={6} >
+    <motion.div style={{ y, zIndex: 5 }}>
+    <Grid container sx={{justifyContent: 'center', width: '100%', position: 'absolute', backgroundColor: 'white',}}>
+      <Grid container sx={{ minHeight: '100vh', padding: '150px 20px 0px 20px', display: 'flex', justifyContent: 'space-between', maxWidth: '1200px', alignItems: 'center' }} spacing={6} >
       <Grid item size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 6 }} sx={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
         <h1 style={{ letterSpacing: '4px', fontWeight: '100', fontSize: !isSmallScreen ? '80px' : '45px', margin: '10px' }}>ABOUT US</h1>
         <p style={{ fontSize: !isSmallScreen ? '25px' : '15px' }}><b>Virsapur</b> is a cultural enterprise dedicated to making Pakistan’s history, heritage, and diverse cultural identity accessible to all. Through research-driven programs, heritage tours, workshops, and digital storytelling, Virsapur reconnects communities with their cultural roots and creates meaningful learning experiences for people of all ages. We work at the intersection of heritage preservation, education, and cultural engagement, ensuring that Pakistan’s past becomes a source of pride, knowledge, and empowerment for the future.</p>
@@ -36,6 +43,8 @@ const AboutUs = () => {
         </Box>
       </Grid>
     </Grid>
+    </Grid>
+    </motion.div>
   )
 }
 
