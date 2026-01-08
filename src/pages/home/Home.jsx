@@ -31,10 +31,10 @@ const Home = () => {
         <AboutUs scrollY={scrollY}/>
         <Founders scrollY={scrollY}/>
       </Grid>
-        <Services />
+        <Services scrollY={scrollY} />
         <ProjectsTitle scrollY={scrollY} />
-        <Projects />
-        <PakistanMap />
+        <Projects scrollY={scrollY}/>
+        <PakistanMap scrollY={scrollY} />
         <Heritage />
         <Feedback />
         <Collaborators /> 

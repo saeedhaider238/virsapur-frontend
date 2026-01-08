@@ -13,7 +13,7 @@ const AboutUs = ({scrollY}) => {
   
 
   return (
-    <motion.div style={{ y, zIndex: 5 }}>
+    <motion.div style={{ y, zIndex: 25 }}>
     <Grid container sx={{justifyContent: 'center', width: '100%', position: 'absolute', backgroundColor: 'white',}}>
       <Grid container sx={{ minHeight: '100vh', padding: '150px 20px 0px 20px', display: 'flex', justifyContent: 'space-between', maxWidth: '1200px', alignItems: 'center' }} spacing={6} >
       <Grid item size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 6 }} sx={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>

@@ -10,13 +10,14 @@ const menuItems = [
   { text: "Home", path: "/home" },
   { text: "Trails", path: "/trails" },
   { text: "Workshops", path: "/workshops" },
+  { text: "Courses", path: '/courses' },
   { text: "Why Virsapur!", path: "/why-virsapur" },
   { text: "Bookings", path: "/bookings" },
   { text: "Blog", path: "/blog" },
 ];
 
 const Navbar = ({scrollY}) => {
-  const isSmallScreen = useMediaQuery('(max-width: 860px)')
+  const isSmallScreen = useMediaQuery('(max-width: 900px)')
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [vh, setVh] = useState(window.innerHeight);
   const [bgColor, setBgColor] = useState('transparent');

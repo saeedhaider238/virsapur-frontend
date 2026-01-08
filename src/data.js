@@ -298,6 +298,35 @@ const workshopData = [
     }
 ];
 
+const coursesData = [
+  {
+    title: "Introduction to React",
+    summary: "Learn the basics of React and build interactive UIs.",
+    duration: "4 weeks",
+    level: "Beginner",
+    price: "$49",
+    path: "/course/introduction-to-react",
+    image: Workshop1
+  },
+  {
+    title: "Advanced JavaScript",
+    summary: "Master JavaScript concepts for real-world projects.",
+    duration: "6 weeks",
+    level: "Advanced",
+    price: "$79",
+    path: "/course/advanced-javascript",
+    image: Workshop2
+  },
+  {
+    title: "Free Web Development Bootcamp",
+    summary: "Start your journey in web development for free.",
+    duration: "12 weeks",
+    level: "Beginner",
+    price: "Free Community Course",
+    path: "/course/free-web-development-bootcamp",
+    image: Workshop1
+  },
+];
 
 
-export {foundersData, servicesData, projectsData, heritageData, feedbackData, collaboratorsData, trailsData, workshopData}
+export {foundersData, servicesData, projectsData, heritageData, feedbackData, collaboratorsData, trailsData, workshopData, coursesData}

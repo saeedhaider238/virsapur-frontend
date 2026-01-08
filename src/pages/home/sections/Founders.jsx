@@ -8,11 +8,11 @@ const Founders = ({scrollY}) => {
   const isSmallScreen = useMediaQuery('(max-width: 900px)');
   const isMobileScreen = useMediaQuery('(max-width: 470px)');
   const [vh, setVh] = useState(window.innerHeight);
-  const y = useTransform(scrollY, [vh, 2 * vh], [0, -1 * vh]);
+  const y = useTransform(scrollY, [vh, 2 * vh], [0, -2 * vh]);
 
   return (
     <>
-    <motion.div style={{ y, backgroundColor: 'white' }}>
+    <motion.div style={{ y, backgroundColor: 'white', zIndex: 20 }}>
       <Grid container sx={{ minHeight: '110vh', justifyContent: 'center', alignItems: 'center', padding: `${isMobileScreen ? '120vh' : isSmallScreen ? '160vh' : '100vh'} 0px 0px 0px`, zIndex: 2, position: 'relative', backgroundColor: 'white'}}>
         <Grid sx={{position: 'absolute', backgroundColor: 'white', zIndex: 2,}}>
           <Grid container sx={{ justifyContent: 'center' }}><h1 style={{ letterSpacing: '4px', margin: '70px 0px', fontSize: !isMobileScreen ? '80px' : '45px', fontWeight: '100',  }}>FOUNDERS</h1></Grid>

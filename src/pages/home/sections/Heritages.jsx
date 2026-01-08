@@ -5,11 +5,14 @@ import { heritageData } from '../../../data';
 import { Button } from '@mui/material';
 import { Link as RouterLink } from 'react-router';
 import Slider from "react-slick";
+import { useInView } from 'framer-motion';
 
 const Heritage = () => {
     const isMobileScreen = useMediaQuery('(max-width: 470px)');
     const screenWidth = window.innerWidth
     const slidesToShowOnScreen = useRef(screenWidth < 460 ? 1 : screenWidth < 800 ? 2 : 3)
+    const ref = useRef(null)
+    const isInView = useInView(ref, { amount: 0.8, once: false });
 
     const settings = {
         dots: true,
@@ -56,11 +59,11 @@ const Heritage = () => {
             }
             `}</style>
 
-            <Grid container sx={{ backgroundColor: '#fffdf7', marginTop: '100px', justifyContent: 'center', paddingBottom: '70px', }}>
+            <Grid container sx={{ marginTop: '100px', justifyContent: 'center', paddingBottom: '70px', }} ref={ref}>
                 <Grid style={{ justifyContent: 'center', padding: '0px'}} size={12} ><h1 style={{ letterSpacing: '4px', fontSize: !isMobileScreen ? '80px' : '45px', fontWeight: '100', textAlign: 'center', marginTop: '70px' }}>Heritage of Our Land</h1></Grid>
 
                 <Grid container sx={{width: '100%', overflow: 'hidden', justifyContent: 'center',}}>
-                    <Grid className='heritageCarrouselContainer' sx={{width: '80%'}}>
+                    <Grid className='heritageCarrouselContainer' sx={{width: '80%', zIndex: isInView ? 0 : -1}}>
                     <Slider key={`${isMobileScreen}`} {...settings}>
                         {[...heritageData, ...heritageData].map((slide, index) => (
                             <div key={index} style={{ padding: "10px", }}>
