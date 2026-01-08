@@ -8,11 +8,11 @@ import { useTransform, motion } from 'framer-motion';
 const ProjectsTitle = ({scrollY}) => {
     const isMobileScreen = useMediaQuery('(max-width: 470px)')
     const [vh, setVh] = useState(window.innerHeight);
-    const y = useTransform(scrollY, [2.5*vh, 3.5*vh], [0, -1 * vh]); 
+    const y = useTransform(scrollY, [2*vh, 3*vh], [0, -1 * vh]); 
 
   return (
-    <motion.div style={{ y, backgroundColor: 'white' }}>
-      <Grid container sx={{ marginTop: '100px', height: '100vh', position: 'absolute', right: 0, width: '100%', zIndex: '4' }}>
+    <motion.div style={{ y, backgroundColor: 'white', position: 'relative', zIndex: 18, marginTop: '40vh' }}>
+      <Grid container sx={{ marginTop: '100px', height: '100vh', position: 'absolute', right: 0, width: '100%', zIndex: 0,  }}>
         <Grid item sx={{ overflow: 'hidden', display: 'flex', justifyContent: 'center', position: 'absolute', zIndex: '-1', width: '100%', height: '100%' }}>
           <video src={ProductsSectionBackground} autoPlay loop muted style={{ width: '100%', minWidth: '1400px', objectFit: 'cover' }} poster={productsSectionBackgroundPoster} ></video>
         </Grid>
