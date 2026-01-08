@@ -7,7 +7,7 @@ import { useTransform, motion } from 'framer-motion';
 const Projects = ({scrollY}) => {
     const isSmallScreen = useMediaQuery('(max-width: 900px)');
     const [vh, setVh] = useState(window.innerHeight);
-    const y = useTransform(scrollY, [3*vh, 3.5*vh], [0, -2.5 * vh]); 
+    const y = useTransform(scrollY, [3*vh, 3.5*vh], [0, -2 * vh]); 
 
     return (
         <motion.div style={{y, position: 'relative', zIndex: 1, marginTop: '10vh'}}>
