@@ -13,8 +13,6 @@ import Heritage from './sections/Heritages.jsx';
 import Feedback from './sections/Feedback.jsx';
 import Collaborators from './sections/Collaborators.jsx';
 import GetInTouch from './sections/GetInTouch.jsx';
-import GetInTouch2 from './sections/GetInTouch2.jsx';
-import GetInTouch3 from './sections/GetInTouch3.jsx';
 
 const Home = () => {
   const { scrollY } = useScroll(); 
@@ -35,12 +33,10 @@ const Home = () => {
         <ProjectsTitle scrollY={scrollY} />
         <Projects scrollY={scrollY}/>
         <PakistanMap scrollY={scrollY} />
-        <Heritage />
-        <Feedback />
-        <Collaborators /> 
+        <Heritage scrollY={scrollY} />
+        <Feedback scrollY={scrollY}/>
+        <Collaborators scrollY={scrollY} /> 
         <GetInTouch />
-        <GetInTouch2 /> 
-        <GetInTouch3 />
 
       {/* <Grid sx={{height: '120vh'}}>
       </Grid> */}
