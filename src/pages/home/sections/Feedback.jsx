@@ -1,12 +1,15 @@
-import React, { useRef } from 'react'
-import { Grid, useMediaQuery  } from '@mui/material'
+import React, { useRef, useState } from 'react'
+import { Grid, useMediaQuery } from '@mui/material'
 import Slider from 'react-slick';
 import { feedbackData } from '../../../data';
+import { useTransform, motion } from 'framer-motion';
 
-const Feedback = () => {
+const Feedback = ({ scrollY }) => {
   const isMobileScreen = useMediaQuery('(max-width: 470px)');
   const screenWidth = window.innerWidth
   const slidesToShowOnScreen = useRef(screenWidth < 460 ? 1 : screenWidth < 600 ? 2 : screenWidth < 1024 ? 3 : 4)
+  const [vh, setVh] = useState(window.innerHeight);
+  const y = useTransform(scrollY, [4.3 * vh, 4.8 * vh], [0, -1 * vh]);
 
   const settings = {
     dots: true,
@@ -19,7 +22,7 @@ const Feedback = () => {
     autoplaySpeed: 0,
     initialSlide: 0,
     arrows: true,
-    responsive: [         
+    responsive: [
       {
         breakpoint: 1024,
         settings: {
@@ -74,26 +77,28 @@ const Feedback = () => {
             }
         `}</style>
 
-      <Grid container sx={{ marginTop: '100px', justifyContent: 'center' }}>
-        <Grid container sx={{ justifyContent: 'center' }} size={12} ><h1 style={{ letterSpacing: '4px', margin: '70px 0px', fontSize: !isMobileScreen ? '80px' : '45px', fontWeight: '100', textAlign: 'center' }}>FEEDBACK</h1></Grid>
+      <motion.div style={{ y, position: 'relative', zIndex: 14, height: '0vh', backgroundColor: 'white' }}>
+        <Grid container sx={{ marginTop: '0vh', justifyContent: 'center', zIndex: 0, position: 'absolute', width: '100%', backgroundColor: 'white', paddingBottom: '90px', alignItems: 'flex-start', height: '100vh', flexDirection: 'column' }}>
+          <Grid container sx={{ justifyContent: 'center' }} size={12}><h1 style={{ letterSpacing: '4px', margin: '70px 0px', fontSize: !isMobileScreen ? '80px' : '45px', fontWeight: '100', textAlign: 'center' }}>FEEDBACK</h1></Grid>
 
-        <Grid sx={{overflow: 'hidden', }} className='feedbackCarrouselContainer' >
-          <Slider key={`${isMobileScreen}`} {...settings}>
-            {[...feedbackData, ...feedbackData].map((feedback, index) => (
-              <div key={index} style={{ padding: "0px", position: 'relative', }} className='slide-card'>
-        
-                <div className="overlay">
-                  <h3>{feedback.name}</h3>
-                  <p>{feedback.review}</p>
+          <Grid sx={{ overflow: 'hidden', }} size={12} className='feedbackCarrouselContainer' >
+            <Slider key={`${isMobileScreen}`} {...settings}>
+              {[...feedbackData, ...feedbackData].map((feedback, index) => (
+                <div key={index} style={{ padding: "0px", position: 'relative', }} className='slide-card'>
+
+                  <div className="overlay">
+                    <h3>{feedback.name}</h3>
+                    <p>{feedback.review}</p>
+                  </div>
+
+                  <img src={feedback.image} alt={feedback.title} style={{ width: "100%", borderRadius: "10px" }} />
                 </div>
+              ))}
+            </Slider>
+          </Grid>
 
-                <img src={feedback.image} alt={feedback.title} style={{ width: "100%", borderRadius: "10px"}} />
-              </div>
-            ))}
-          </Slider>
         </Grid>
-
-      </Grid>
+      </motion.div>
     </>
   )
 }

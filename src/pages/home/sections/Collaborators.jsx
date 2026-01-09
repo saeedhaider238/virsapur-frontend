@@ -1,13 +1,16 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { Grid, useMediaQuery } from '@mui/material'
 import Slider from 'react-slick';
 import { collaboratorsData } from '../../../data';
+import { useTransform, motion } from 'framer-motion';
 
-const Collaborators = () => {
+const Collaborators = ({scrollY}) => {
     const isMobileScreen = useMediaQuery('(max-width: 470px)');
     const isVerySmallScreen = useMediaQuery('(max-width: 360px)')
     const screenWidth = window.innerWidth
     const slidesToShowOnScreen = useRef(screenWidth < 460 ? 1 : screenWidth < 600 ? 2 : screenWidth < 1024 ? 3 : 4)
+    const [vh, setVh] = useState(window.innerHeight);
+    const y = useTransform(scrollY, [4.8 * vh, 5.3 * vh], [0, -1 * vh]);
 
     const settings = {
         dots: true,
@@ -60,13 +63,15 @@ const Collaborators = () => {
             }
         `}</style>
 
-            <Grid container sx={{ marginTop: '100px', justifyContent: 'center', }}>
+            <motion.div style={{y, position: 'relative', zIndex: 13}}>
+                <Grid sx={{position: 'relative',  marginTop: '30vh',}}>
+                    <Grid container sx={{ justifyContent: 'center', position: 'absolute', height: '100vh', width: '100%', backgroundColor: 'white', flexDirection: 'column'}}>
                 <Grid container sx={{ justifyContent: 'center', overflow: 'hidden', }} size={12} ><h1 style={{
                     letterSpacing: !isMobileScreen ? '4px' : '0px', fontSize: !isMobileScreen ? '75px' : '40px', margin: '70px 0px', fontWeight: '100', textAlign: 'center', overflowWrap: 'break-word', wordBreak: 'break-word',
                     whiteSpace: 'normal',
                 }}>COLLABORATORS</h1></Grid>
 
-                <Grid sx={{ overflow: 'hidden'}} className='feedbackCarrouselContainer' >
+                <Grid sx={{ overflow: 'hidden'}} className='feedbackCarrouselContainer' size={12} >
                     <Slider key={`${isMobileScreen}`} {...settings}>
                         {[...collaboratorsData, ...collaboratorsData].map((feedback, index) => (
                             <div key={index} style={{ padding: "0px", position: 'relative', }} className='slide-card'>
@@ -75,8 +80,9 @@ const Collaborators = () => {
                         ))}
                     </Slider>
                 </Grid>
-
             </Grid>
+                </Grid>
+            </motion.div>
         </>
     )
 }

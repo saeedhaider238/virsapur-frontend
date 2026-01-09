@@ -35,12 +35,10 @@ const Home = () => {
         <ProjectsTitle scrollY={scrollY} />
         <Projects scrollY={scrollY}/>
         <PakistanMap scrollY={scrollY} />
-        <Heritage />
-        <Feedback />
-        <Collaborators /> 
+        <Heritage scrollY={scrollY} />
+        <Feedback scrollY={scrollY}/>
+        <Collaborators scrollY={scrollY} /> 
         <GetInTouch />
-        <GetInTouch2 /> 
-        <GetInTouch3 />
 
       {/* <Grid sx={{height: '120vh'}}>
       </Grid> */}

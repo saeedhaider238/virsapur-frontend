@@ -14,11 +14,11 @@ const Courses = () => {
         <Navbar scrollY={scrollY} />
         <Hero scrollY={scrollY} /> 
         <Grid sx={{ paddingTop: '60vh', display: 'flex', justifyContent: 'center', backgroundColor: '#fffdf1', }}>
-            <LearningHub />
+            <LearningHub scrollY={ scrollY } />
         </Grid>
         <Course />
-        <Grid sx={{height: '100vh'}}>
-      </Grid>
+        {/* <Grid sx={{height: '100vh'}}>
+      </Grid> */}
     </>
   )
 }

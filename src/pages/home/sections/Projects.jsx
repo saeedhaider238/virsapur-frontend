@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react'
+import React, {useState, useRef, useLayoutEffect} from 'react'
 import Grid from '@mui/material/Grid';
 import { useMediaQuery } from '@mui/material';
 import { projectsData } from '../../../data';
@@ -6,13 +6,25 @@ import { useTransform, motion } from 'framer-motion';
 
 const Projects = ({scrollY}) => {
     const isSmallScreen = useMediaQuery('(max-width: 900px)');
+    const isMobileScreen = useMediaQuery('(max-width: 470px)');
     const [vh, setVh] = useState(window.innerHeight);
-    const y = useTransform(scrollY, [3*vh, 3.5*vh], [0, -2 * vh]); 
+    
+    const sectionRef = useRef(null);
+    const [sectionHeight, setSectionHeight] = useState(0);
+
+useLayoutEffect(() => {
+  if (sectionRef.current) {
+    // console.log(sectionRef.current.offsetHeight)
+    setSectionHeight(sectionRef.current.offsetHeight);
+  }
+}, []);
+
+    const y = useTransform(scrollY, [3*vh, 3.5*vh], [0, isMobileScreen ? -1.2*sectionHeight : isSmallScreen ? -2.6*sectionHeight : -1.2*sectionHeight]); 
 
     return (
-        <motion.div style={{y, position: 'relative', zIndex: 1, marginTop: '10vh'}}>
+        <motion.div style={{y, position: 'relative', zIndex: 17, marginTop: '10vh'}}>
             <Grid container sx={{ marginTop: '100px', justifyContent: 'center', paddingTop: '65vh', minHeight: '100vh', }}>
-                <Grid sx={{position: 'absolute', backgroundColor: 'white', width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+                <Grid sx={{position: 'absolute', backgroundColor: 'white', width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', }} ref={sectionRef}>
                     {projectsData.map((project, index) => {
                         const isEven = index % 2 === 0;
                         return (

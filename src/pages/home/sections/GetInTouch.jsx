@@ -45,7 +45,7 @@ const GetInTouch = () => {
     };
 
     return (
-        <Grid container sx={{ marginTop: '100px', justifyContent: 'center', backgroundImage: `url(${getInTouchBackground})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center bottom' }}>
+        <Grid container sx={{ marginTop: '90vh', justifyContent: 'center', backgroundImage: `url(${getInTouchBackground})`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover', backgroundPosition: 'center bottom' }}>
             <Grid container sx={{ width: '100%', maxWidth: '1200px', padding: '70px 20px 250px 20px' }} >
                 <Grid size={{ xs: 12, sm: 12, md: 6 }}>
                     <Grid sx={{ backgroundColor: '#52576d', width: 'auto', display: 'inline-block', padding: '0px 30px', borderRadius: '20px' }}>
