@@ -13,8 +13,6 @@ import Heritage from './sections/Heritages.jsx';
 import Feedback from './sections/Feedback.jsx';
 import Collaborators from './sections/Collaborators.jsx';
 import GetInTouch from './sections/GetInTouch.jsx';
-import GetInTouch2 from './sections/GetInTouch2.jsx';
-import GetInTouch3 from './sections/GetInTouch3.jsx';
 
 const Home = () => {
   const { scrollY } = useScroll(); 
