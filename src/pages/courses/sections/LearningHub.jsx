@@ -11,7 +11,7 @@ const LearningHub = ({ scrollY }) => {
 
     return (
         <motion.div style={{ position: 'relative', width: '100%', zIndex: 9,height: '0vh', y}}>
-            <Grid container sx={{  width: '100%', position: 'absolute', width: '100%', justifyContent: 'center', backgroundColor:'#fffdf1', height: '100vh', alignItems: 'center' }}>
+            <Grid container sx={{  width: '100%', position: 'absolute', justifyContent: 'center', backgroundColor:'#fffdf1', height: '100vh', alignItems: 'center' }}>
                 <Grid sx={{maxWidth: '1200px'}}>
                     <Grid container sx={{ justifyContent: 'center', alignItems: 'center', flexDirection: 'column',}} spacing={2}>
                     <img src={StarSymbol} style={{ width: !isSmallScreen ? '150px' : '100px' }} alt="" />

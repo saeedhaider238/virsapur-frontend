@@ -76,7 +76,7 @@ const Services = ({ scrollY }) => {
             `}</style>
       <motion.div style={{y, position: 'relative', zIndex: 19}}>
         <Grid sx={{position: 'relative', backgroundColor: 'white'}}>
-        <Grid container sx={{ marginTop: '100px', paddingBottom: '70px', justifyContent: 'center', alignItems: 'center', position: 'absolute', zIndex: 1, width: '100%', backgroundColor: 'white'  }} ref={ref} >
+        <Grid container sx={{ marginTop: '100px', paddingBottom: '70px', justifyContent: 'center', alignItems: 'center', position: 'absolute', zIndex: 1, width: '100%', backgroundColor: 'white', minHeight: '100vh'  }} ref={ref} >
             <Grid container sx={{ justifyContent: 'center', zIndex: 0 }} size={12} ><h1 style={{ letterSpacing: '4px', margin: '70px 0px', fontSize: !isMobileScreen ? '80px' : '45px', fontWeight: '100', textAlign: 'center' }}>OUR SERVICES</h1></Grid>
             <Grid sx={{ overflow: 'hidden', zIndex: 0 }} className='servicesCarrouselContainer'>
               <Slider key={`${isMobileScreen}`} {...settings}>
