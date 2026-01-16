@@ -22,12 +22,12 @@ const WhyVirsapur = () => {
             <Navbar scrollY={scrollY} />
             <Hero scrollY={scrollY} />
             <Grid sx={{ paddingTop: '50vh', display: 'flex', justifyContent: 'center' }}>
-                <VirsapurCommunity />
+                <VirsapurCommunity scrollY={scrollY} />
             </Grid>
-            <WhoWeAre />
-            <MissionAndVision />
-            <WhatMakesUsDifferent />
-            <OurImpact />
+            <WhoWeAre scrollY={scrollY} />
+            <MissionAndVision scrollY={scrollY} />
+            <WhatMakesUsDifferent scrollY={scrollY} />
+            <OurImpact scrollY={scrollY} />
             <PhotoCollage />
         </>
     )

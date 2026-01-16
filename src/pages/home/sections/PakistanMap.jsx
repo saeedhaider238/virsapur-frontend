@@ -8,7 +8,7 @@ const PakistanMap = ({scrollY}) => {
 
   return (
     <motion.div style={{y, zIndex: 16, position: 'relative'}}>
-      <Grid sx={{position: 'absolute', marginTop: '40vh', zIndex: 16, width: '100%'}}>
+      <Grid sx={{position: 'absolute', paddingTop: '55vh', zIndex: 16, width: '100%'}}>
         <Grid container sx={{height: '100vh', justifyContent: 'center', alignItems: 'center', position:'absolute', zIndex: 16, backgroundColor: '#FAF9F6',  width: '100%', }}>
         <h1>Pakistan map's space</h1>
       </Grid>
