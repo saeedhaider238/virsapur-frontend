@@ -6,6 +6,7 @@ import "react-image-gallery/styles/css/image-gallery.css";
 import { useParams } from 'react-router';
 import { workshopData as workshopsData } from '../../data';
 import LoginOrBook from './section/LoginOrBook';
+import ShowcasingWorkshopsImpacts from './section/ShowcasingWorkshopsImpacts.jsx';
 
 const Workshop = () => {
     const { workshopPath } = useParams();
@@ -41,6 +42,12 @@ const Workshop = () => {
                     <Grid container size={12} sx={{ justifyContent: 'center', marginBottom: '100px'}}>
                         <Grid sx={{width: '100%'}}>
                             <LoginOrBook />
+                        </Grid>
+                    </Grid>
+
+                    <Grid container size={12} sx={{ justifyContent: 'center', marginBottom: '100px'}}>
+                        <Grid sx={{width: '100%'}}>
+                            <ShowcasingWorkshopsImpacts workshopData={workshopData} />
                         </Grid>
                     </Grid>
                 </Grid>

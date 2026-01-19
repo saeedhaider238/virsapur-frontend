@@ -4,11 +4,13 @@ import { coursesData } from '../../data'
 import Navbar from '../../Components/Navbar'
 import { Grid, useMediaQuery } from '@mui/material'
 import LearningProgress from './sections/LearningProgress'
+import EnrollmentForm from './sections/EnrollmentForm'
 
 const Course = () => {
   const isSmallScreen = useMediaQuery('(max-width: 470px)');
     const {coursePath} = useParams()
     const course = coursesData.find(course => course.path === `/course/${coursePath}`)
+
   return (
     <>
       <Navbar />
@@ -32,6 +34,7 @@ const Course = () => {
           </Grid>
         </Grid>
         <LearningProgress />
+        <EnrollmentForm />
       </Grid>
     </>
   )
