@@ -22,6 +22,7 @@ import feedback2 from './assets/feedback/feedback2.png'
 // workshop data
 import Workshop1 from './assets/workshops/Workshop1.png'
 import Workshop2 from './assets/workshops/Workshop2.png'
+import WorkshopImpact1 from './assets/Workshop-Impacts/workshop-impact-1.jpg'
 
 //founders array
 const foundersData = [
@@ -232,6 +233,23 @@ const workshopData = [
             "12 Jan 2025",
             "20 Feb 2025",
             "15 Mar 2025"
+        ],
+        impacts: [
+            {
+                image: WorkshopImpact1,
+                title: 'People reached',
+                values: ['1200 people reached']
+            },
+            {
+                image: WorkshopImpact1,
+                title: 'Cultural Knowledge Shared',
+                values: ['45 creative sessions conducted']
+            },
+            {
+                image: WorkshopImpact1,
+                title: 'Community engagement',
+                values: ['30 community photography events']
+            },
         ]
     },
     {
@@ -263,6 +281,23 @@ const workshopData = [
             "18 Jan 2025",
             "25 Feb 2025",
             "10 Mar 2025"
+        ],
+        impacts: [
+            {
+                image: WorkshopImpact1,
+                title: 'People reached',
+                values: ['900 participants engaged']
+            },
+            {
+                image: WorkshopImpact1,
+                title: 'Cultural Knowledge Shared',
+                values: ['35 design learning sessions']
+            },
+            {
+                image: WorkshopImpact1,
+                title: 'Community engagement',
+                values: ['20 collaborative design workshops']
+            },
         ]
     },
     {
@@ -294,6 +329,23 @@ const workshopData = [
             "25–26 Jan 2025",
             "15–16 Feb 2025",
             "5–6 Mar 2025"
+        ],
+        impacts: [
+            {
+                image: WorkshopImpact1,
+                title: 'People reached',
+                values: ['750 aspiring developers trained']
+            },
+            {
+                image: WorkshopImpact1,
+                title: 'Cultural Knowledge Shared',
+                values: ['40 technical learning sessions']
+            },
+            {
+                image: WorkshopImpact1,
+                title: 'Community engagement',
+                values: ['25 collaborative coding activities']
+            },
         ]
     }
 ];
