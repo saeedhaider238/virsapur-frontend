@@ -34,7 +34,7 @@ const Course = () => {
           </Grid>
         </Grid>
         <LearningProgress />
-        <EnrollmentForm />
+        <EnrollmentForm course={course} coursesData={coursesData} />
       </Grid>
     </>
   )

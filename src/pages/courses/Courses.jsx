@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import Navbar from '../../Components/Navbar'
 import { useScroll } from 'framer-motion'
 import Hero from './sections/Hero'
@@ -8,6 +8,10 @@ import Course from './sections/Course'
 
 const Courses = () => {
     const { scrollY } = useScroll(); 
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []); 
 
   return (
     <>
