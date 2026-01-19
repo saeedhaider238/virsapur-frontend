@@ -15,15 +15,15 @@ import {
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
-const EnrollmentForm = () => {
+const EnrollmentForm = ({course, coursesData}) => {
     const [formData, setFormData] = useState({
         fullName: '',
         email: '',
-        course: '',
+        course: course.path.split('/').at(-1),
         password: '',
         confirmPassword: ''
     });
-
+    console.log(course.path.split('/').at(-1))
     const [errors, setErrors] = useState({});
     // State to toggle visibility
     const [showPassword, setShowPassword] = useState(false);
@@ -109,9 +109,9 @@ const EnrollmentForm = () => {
                             error={!!errors.course}
                             helperText={errors.course}
                         >
-                            <MenuItem value="fullstack">Full Stack Web Dev</MenuItem>
-                            <MenuItem value="ai">Artificial Intelligence</MenuItem>
-                            <MenuItem value="cyber">Cyber Security</MenuItem>
+                            {coursesData.map((item, index) => (
+                                <MenuItem value={item.path.split('/').at(-1)}>{item.title}</MenuItem>
+                            ))}
                         </TextField>
 
                         <TextField
