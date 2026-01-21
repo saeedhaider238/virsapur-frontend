@@ -19,7 +19,7 @@ const Services = ({ scrollY }) => {
   const isInView = useInView(ref, { amount: 0.8, once: false });
 
   const [vh, setVh] = useState(window.innerHeight);
-  const y = useTransform(scrollY, [6*vh, 8*vh], [0, -1 * vh]); 
+  const y = useTransform(scrollY, [6*vh, 8*vh], [0, -1.2 * vh]); 
 
   //   useEffect(() => {
   //   if (isInView) {
