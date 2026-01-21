@@ -10,7 +10,7 @@ const Collaborators = ({scrollY}) => {
     const screenWidth = window.innerWidth
     const slidesToShowOnScreen = useRef(screenWidth < 460 ? 1 : screenWidth < 600 ? 2 : screenWidth < 1024 ? 3 : 4)
     const [vh, setVh] = useState(window.innerHeight);
-    const y = useTransform(scrollY, [4.8 * vh, 5.3 * vh], [0, -1 * vh]);
+    const y = useTransform(scrollY, [19 * vh, 21 * vh], [0, -1 * vh]);
 
     const settings = {
         dots: true,
@@ -63,8 +63,8 @@ const Collaborators = ({scrollY}) => {
             }
         `}</style>
 
-            <motion.div style={{y, position: 'relative', zIndex: 13}}>
-                <Grid sx={{position: 'relative',  marginTop: '30vh',}}>
+            <motion.div style={{y, position: 'fixed', zIndex: 17, top: 0, left: 0, width: '100%'}}>
+                <Grid sx={{position: 'relative', }}>
                     <Grid container sx={{ justifyContent: 'center', position: 'absolute', height: '100vh', width: '100%', backgroundColor: 'white', flexDirection: 'column'}}>
                 <Grid container sx={{ justifyContent: 'center', overflow: 'hidden', }} size={12} ><h1 style={{
                     letterSpacing: !isMobileScreen ? '4px' : '0px', fontSize: !isMobileScreen ? '75px' : '40px', margin: '70px 0px', fontWeight: '100', textAlign: 'center', overflowWrap: 'break-word', wordBreak: 'break-word',

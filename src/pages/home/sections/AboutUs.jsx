@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useLayoutEffect } from 'react'
 import Grid from '@mui/material/Grid';
 import historicalPlace from '../../../assets/monuments/historicalPlace.png'
 import { useMediaQuery } from '@mui/material';
@@ -7,14 +7,25 @@ import Box from '@mui/material/Box';
 import { useTransform, motion } from "framer-motion";
 
 const AboutUs = ({scrollY}) => {
-  const isSmallScreen = useMediaQuery('(max-width: 470px)');
+  const isSmallScreen = useMediaQuery('(max-width: 900px)');
+    const isMobileScreen = useMediaQuery('(max-width: 470px)');
   const [vh, setVh] = useState(window.innerHeight);
-  const y = useTransform(scrollY, [vh/2, vh], [0, -1 * vh]); 
+
+  const sectionRef = useRef(null);
+      const [sectionHeight, setSectionHeight] = useState(0);
   
+  useLayoutEffect(() => {
+    if (sectionRef.current) {
+      // console.log(sectionRef.current.offsetHeight)
+      setSectionHeight(sectionRef.current.offsetHeight);
+    }
+  }, []);
+  
+  const y = useTransform(scrollY, [2*vh, 4*vh], [0, isMobileScreen ? -1.2*sectionHeight : isSmallScreen ? -2.6*sectionHeight : -1.2*sectionHeight]); 
 
   return (
-    <motion.div style={{ y, zIndex: 25 }}>
-    <Grid container sx={{justifyContent: 'center', width: '100%', position: 'absolute', backgroundColor: 'white',}}>
+    <motion.div style={{ y, zIndex: 25, position: 'fixed', top: 0, left: 0, width: '100%' }} ref={sectionRef}>
+    <Grid container sx={{justifyContent: 'center', width: '100%', backgroundColor: 'white', }}>
       <Grid container sx={{ minHeight: '100vh', padding: '150px 20px 0px 20px', display: 'flex', justifyContent: 'space-between', maxWidth: '1200px', alignItems: 'center' }} spacing={6} >
       <Grid item size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 6 }} sx={{ display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
         <h1 style={{ letterSpacing: '4px', fontWeight: '100', fontSize: !isSmallScreen ? '80px' : '45px', margin: '10px' }}>ABOUT US</h1>

@@ -38,8 +38,8 @@ const Home = () => {
         <Collaborators scrollY={scrollY} /> 
         <GetInTouch />
 
-      {/* <Grid sx={{height: '120vh'}}>
-      </Grid> */}
+      <Grid sx={{height: '2060vh'}}>
+      </Grid>
     </>
   )
 }

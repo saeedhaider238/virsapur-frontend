@@ -15,7 +15,7 @@ const Heritage = ({scrollY}) => {
     const ref = useRef(null)
     const isInView = useInView(ref, { amount: 0.8, once: false });
     const [vh, setVh] = useState(window.innerHeight);
-    const y = useTransform(scrollY, [3.9*vh, 4.4*vh], [0, -1 * vh]); 
+    const y = useTransform(scrollY, [15*vh, 17*vh], [0, -1 * vh]); 
 
     const settings = {
         dots: true,
@@ -62,7 +62,7 @@ const Heritage = ({scrollY}) => {
             }
             `}</style>
 
-            <motion.div style={{y, position: 'relative', zIndex: 15, height: '40vh', marginTop: '100vh', backgroundColor: 'white'}}>
+            <motion.div style={{y, position: 'fixed', zIndex: 19, marginTop: '10vh', backgroundColor: 'white', top: 0, left: 0, width: '100%'}}>
                 <Grid container sx={{justifyContent: 'center', paddingBottom: '70px', position: 'absolute', left: 0, width: '100%', backgroundColor: 'white',zIndex: 0, height: '100vh',}} ref={ref}>
                     <Grid size={12} style={{ justifyContent: 'center', padding: '0px' }} ><h1 style={{ letterSpacing: '4px', fontSize: !isMobileScreen ? '80px' : '45px', fontWeight: '100', textAlign: 'center', marginTop: '70px' }}>Heritage of Our Land</h1></Grid>
 

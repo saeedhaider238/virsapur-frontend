@@ -19,7 +19,7 @@ const Services = ({ scrollY }) => {
   const isInView = useInView(ref, { amount: 0.8, once: false });
 
   const [vh, setVh] = useState(window.innerHeight);
-  const y = useTransform(scrollY, [1.7*vh, 2.2*vh], [0, -1 * vh]); 
+  const y = useTransform(scrollY, [6*vh, 8*vh], [0, -1 * vh]); 
 
   //   useEffect(() => {
   //   if (isInView) {
@@ -74,11 +74,11 @@ const Services = ({ scrollY }) => {
                 gap: 20px !important;
             }
             `}</style>
-      <motion.div style={{y, position: 'relative', zIndex: 19}}>
+      <motion.div style={{y, position: 'fixed', zIndex: 23, top: 0, left: 0, width: '100%'}}>
         <Grid sx={{position: 'relative', backgroundColor: 'white'}}>
-        <Grid container sx={{ marginTop: '100px', paddingBottom: '70px', justifyContent: 'center', alignItems: 'center', position: 'absolute', zIndex: 1, width: '100%', backgroundColor: 'white', minHeight: '100vh'  }} ref={ref} >
-            <Grid container sx={{ justifyContent: 'center', zIndex: 0 }} size={12} ><h1 style={{ letterSpacing: '4px', margin: '70px 0px', fontSize: !isMobileScreen ? '80px' : '45px', fontWeight: '100', textAlign: 'center' }}>OUR SERVICES</h1></Grid>
-            <Grid sx={{ overflow: 'hidden', zIndex: 0 }} className='servicesCarrouselContainer'>
+        <Grid container sx={{ marginTop: '100px', paddingBottom: '70px', justifyContent: 'center', alignItems: 'center', zIndex: 1, width: '100%', backgroundColor: 'white', minHeight: '100vh'  }} ref={ref} >
+            <Grid container sx={{ justifyContent: 'center', zIndex: 0, }} ><h1 style={{ letterSpacing: '4px', margin: '70px 0px', fontSize: !isMobileScreen ? '80px' : '45px', fontWeight: '100', textAlign: 'center' }}>OUR SERVICES</h1></Grid>
+            <Grid sx={{ overflow: 'hidden', zIndex: 0, alignSelf: 'flex-start' }} className='servicesCarrouselContainer'>
               <Slider key={`${isMobileScreen}`} {...settings}>
                 {[...servicesData, ...servicesData].map((slide, index) => (
                   <div key={index} style={{ padding: "10px", }}>
