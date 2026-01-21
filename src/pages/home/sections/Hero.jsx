@@ -9,10 +9,10 @@ const Hero = ({scrollY}) => {
   const isMobileScreen = useMediaQuery('(max-width: 470px)')
   const heroRef = useRef(null)
   const [vh, setVh] = useState(window.innerHeight);
-  const y1 = useTransform(scrollY, [0, vh], [0, -1 * vh]); 
+  const y1 = useTransform(scrollY, [0, 2*vh], [0, -1 * vh]); 
   
   return (
-    <motion.div style={{ y: y1, position: 'relative', zIndex: 26}}>
+    <motion.div style={{ y: y1, zIndex: 26, position: 'fixed', top: 0, left: 0, width: '100%'}}>
       <Grid sx={{ position: 'absolute', zIndex: 10, right: 0, width: '100%', backgroundImage: `url(${landingSectionBackgroundPoster})` }} ref={heroRef}>
         <Grid container sx={{ overflow: 'hidden', height: '100vh', position: 'relative' }}>
           <Grid item sx={{ overflow: 'hidden', display: 'flex', justifyContent: 'center', position: 'absolute', zIndex: '-1', width: '100%', height: '100%' }}>
@@ -28,3 +28,4 @@ const Hero = ({scrollY}) => {
 }
 
 export default Hero
+

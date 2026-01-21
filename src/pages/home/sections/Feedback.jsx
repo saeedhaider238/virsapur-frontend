@@ -9,7 +9,7 @@ const Feedback = ({ scrollY }) => {
   const screenWidth = window.innerWidth
   const slidesToShowOnScreen = useRef(screenWidth < 460 ? 1 : screenWidth < 600 ? 2 : screenWidth < 1024 ? 3 : 4)
   const [vh, setVh] = useState(window.innerHeight);
-  const y = useTransform(scrollY, [4.3 * vh, 4.8 * vh], [0, -1 * vh]);
+  const y = useTransform(scrollY, [17 * vh, 19 * vh], [0, -1 * vh]);
 
   const settings = {
     dots: true,
@@ -77,7 +77,7 @@ const Feedback = ({ scrollY }) => {
             }
         `}</style>
 
-      <motion.div style={{ y, position: 'relative', zIndex: 14, height: '0vh', backgroundColor: 'white' }}>
+      <motion.div style={{ y, position: 'fixed', zIndex: 18, height: '0vh', backgroundColor: 'white', top: 0, left: 0, width: '100%' }}>
         <Grid container sx={{ marginTop: '0vh', justifyContent: 'center', zIndex: 0, position: 'absolute', width: '100%', backgroundColor: 'white', paddingBottom: '90px', alignItems: 'flex-start', height: '100vh', flexDirection: 'column' }}>
           <Grid container sx={{ justifyContent: 'center' }} size={12}><h1 style={{ letterSpacing: '4px', margin: '70px 0px', fontSize: !isMobileScreen ? '80px' : '45px', fontWeight: '100', textAlign: 'center' }}>FEEDBACK</h1></Grid>
 

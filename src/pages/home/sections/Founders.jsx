@@ -7,13 +7,14 @@ import { useTransform, motion } from "framer-motion";
 const Founders = ({scrollY}) => {
   const isSmallScreen = useMediaQuery('(max-width: 900px)');
   const isMobileScreen = useMediaQuery('(max-width: 470px)');
+  const isSmallMobileScreen = useMediaQuery('(max-width: 400px)');
   const [vh, setVh] = useState(window.innerHeight);
-  const y = useTransform(scrollY, [vh, 2 * vh], [0, -2 * vh]);
+  const y = useTransform(scrollY, [4*vh, 6*vh], [0, -2 * vh]);
 
   return (
     <>
-    <motion.div style={{ y, backgroundColor: 'white', zIndex: 20 }}>
-      <Grid container sx={{ minHeight: '100vh', justifyContent: 'center', alignItems: 'center', padding: `${isMobileScreen ? '120vh' : isSmallScreen ? '160vh' : '100vh'} 0px 0px 0px`, zIndex: 2, position: 'relative', backgroundColor: 'white'}}>
+    <motion.div style={{ y, backgroundColor: 'white', zIndex: 24, position: 'fixed',left: 0, top: 0, width: '100%' }}>
+      <Grid container sx={{ minHeight: '100vh', justifyContent: 'center', alignItems: 'center', padding: `${isSmallMobileScreen ? '100vh' : isMobileScreen ? '55vh' : isSmallScreen ? '100vh' : '10vh'} 0px 0px 0px`, zIndex: 2, position: 'relative', backgroundColor: 'white'}}>
         <Grid sx={{position: 'absolute', backgroundColor: 'white', zIndex: 2,}}>
           <Grid container sx={{ justifyContent: 'center' }}><h1 style={{ letterSpacing: '4px', margin: '70px 0px', fontSize: !isMobileScreen ? '80px' : '45px', fontWeight: '100',  }}>FOUNDERS</h1></Grid>
           {foundersData.map((founder, index) => {
