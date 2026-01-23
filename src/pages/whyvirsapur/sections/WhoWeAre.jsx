@@ -21,11 +21,11 @@ const WhoWeAre = ({ scrollY }) => {
     const y = useTransform(scrollY, [0.9 * vh, 1.5 * vh], [0, -1.2 * sectionHeight]);
 
     return (
-        <motion.div style={{ y, position: 'relative', zIndex: 18}}>
+        // <motion.div style={{ y, position: 'relative', zIndex: 18}}>
             <Grid container sx={{ justifyContent: 'center', position: 'relative', }}>
-                <Grid container sx={{ width: '100%', justifyContent: 'center', position: 'absolute', backgroundColor: 'white', minHeight: '100vh' }} ref={sectionRef}>
+                <Grid container sx={{ width: '100%', justifyContent: 'center', backgroundColor: 'white', }} ref={sectionRef}>
                     <Grid sx={{ }}>
-                        <Grid container size={12} sx={{ justifyContent: 'center' }}><h1 style={{ letterSpacing: '4px', margin: '90px 0px', fontSize: !isMobileScreen ? '60px' : '35px', fontWeight: '100', textAlign: 'center' }}>WHO WE ARE</h1></Grid>
+                        <Grid container size={12} sx={{ justifyContent: 'center' }}><h1 style={{ letterSpacing: '4px', margin: '100px 0px', fontSize: !isMobileScreen ? '60px' : '35px', fontWeight: '100', textAlign: 'center' }}>WHO WE ARE</h1></Grid>
                         <Grid container sx={{ padding: '0px 20px 70px 20px', display: 'flex', justifyContent: 'center', maxWidth: '1200px', alignItems: 'center' }} spacing={6} >
                             <Grid container sx={{ justifyContent: 'center', }} spacing={{ xs: 2, sm: 2, md: 6 }}>
                                 <Grid container size={{ xs: 12, sm: 6 }} sx={{ justifyContent: 'center' }}>
@@ -160,7 +160,7 @@ const WhoWeAre = ({ scrollY }) => {
                     </Grid>
                 </Grid>
             </Grid>
-        </motion.div>
+        // </motion.div>
     )
 }
 

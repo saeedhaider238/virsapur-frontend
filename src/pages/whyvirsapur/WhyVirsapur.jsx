@@ -21,7 +21,7 @@ const WhyVirsapur = () => {
         <>
             <Navbar scrollY={scrollY} />
             <Hero scrollY={scrollY} />
-            <Grid sx={{ paddingTop: '50vh', display: 'flex', justifyContent: 'center' }}>
+            <Grid sx={{ paddingTop: '0vh', display: 'flex', justifyContent: 'center' }}>
                 <VirsapurCommunity scrollY={scrollY} />
             </Grid>
             <WhoWeAre scrollY={scrollY} />

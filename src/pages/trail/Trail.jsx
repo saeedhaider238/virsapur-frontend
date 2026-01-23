@@ -8,7 +8,6 @@ import Monument from '../../assets/trail/monument.png'
 const Trial = () => {
   const { trailPath } = useParams();
   const trailData = trailsData.find(trail => trail.path === `/trail/${trailPath}`)
-  console.log(trailData)
 
   return (
     <>
@@ -19,7 +18,7 @@ const Trial = () => {
             <h1>{trailData.name}</h1>
             <p>{trailData.shortDescription}</p>
           </Grid>
-          <Grid container sx={{ backgroundColor: '#1979b8', padding: '20px',}} size={{ xs: 12, sm: 12, md: 8 }} spacing={2}>
+          <Grid container sx={{ border: '2px solid black', padding: '20px',}} size={{ xs: 12, sm: 12, md: 8 }} spacing={2}>
             <Grid container size={{ xs: 12, sm: 6, md: 4 }} sx={{position: 'relative', backgroundImage: `url(${Monument})`, height: '358px', backgroundSize: 'cover',       
     backgroundPosition: 'center', borderRadius: '20px', overflow: 'hidden', alignItems: 'flex-end', padding: '20px', color: 'white', fontSize: '25px' }}>
               {trailData.pricing}

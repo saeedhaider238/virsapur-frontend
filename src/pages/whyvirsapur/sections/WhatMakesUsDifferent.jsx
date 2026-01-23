@@ -20,9 +20,9 @@ const WhatMakesUsDifferent = ({ scrollY }) => {
 
     return (
         <>
-            <motion.div style={{y, position: "relative", zIndex: 16}}>
-                <Grid sx={{ paddingTop: '50vh', position: 'relative' }}>
-                    <Grid sx={{position: 'absolute', width: '100%', backgroundColor: 'white', minHeight: '100vh'}} ref={sectionRef}>
+            {/* <motion.div style={{y, position: "relative", zIndex: 16}}> */}
+                <Grid sx={{ paddingTop: '0vh', position: 'relative' }}>
+                    <Grid sx={{position: 'relative', width: '100%', backgroundColor: 'white', minHeight: '100vh'}} ref={sectionRef}>
                         <Grid container sx={{ justifyContent: 'center' }}>
                         <Grid container size={12} sx={{ justifyContent: 'center' }}><h1 style={{ letterSpacing: '4px', margin: '90px 0px', fontSize: !isMobileScreen ? '60px' : '35px', fontWeight: '100', textAlign: 'center' }}>WHAT MAKES US DIFFERENT</h1></Grid>
                     </Grid>
@@ -38,7 +38,7 @@ const WhatMakesUsDifferent = ({ scrollY }) => {
                     </Grid>
                     </Grid>
                 </Grid>
-            </motion.div>
+            {/* </motion.div> */}
         </>
     )
 }

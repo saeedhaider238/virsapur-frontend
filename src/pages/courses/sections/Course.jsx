@@ -8,7 +8,7 @@ const Course = () => {
     const isSmallScreen = useMediaQuery('(max-width: 900px)');
 
   return (
-    <Grid container sx={{ marginTop: '35vh', justifyContent: 'center', paddingTop: '70px' }}>
+    <Grid container sx={{ marginTop: '100px', justifyContent: 'center', paddingTop: '70px' }}>
             <Grid sx={{paddingBottom: '100px'}}>
                 {coursesData.map((course, index) => {
                     const isEven = index % 2 === 0;

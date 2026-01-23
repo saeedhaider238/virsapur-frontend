@@ -25,7 +25,7 @@ const Home = () => {
     <>
       <Navbar scrollY={scrollY} />
       <Hero scrollY={scrollY} />
-      <Grid sx={{paddingTop: '50vh', display: 'flex', justifyContent: 'center', flexDirection: 'column',}}>
+      <Grid sx={{paddingTop: '0vh', display: 'flex', justifyContent: 'center', flexDirection: 'column',}}>
         <AboutUs scrollY={scrollY}/>
         <Founders scrollY={scrollY}/>
       </Grid>
@@ -38,8 +38,8 @@ const Home = () => {
         <Collaborators scrollY={scrollY} /> 
         <GetInTouch />
 
-      <Grid sx={{height: '2060vh'}}>
-      </Grid>
+      {/* <Grid sx={{height: '2060vh'}}>
+      </Grid> */}
     </>
   )
 }

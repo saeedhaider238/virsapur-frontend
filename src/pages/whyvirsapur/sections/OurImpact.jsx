@@ -21,9 +21,9 @@ const OurImpact = ({ scrollY }) => {
 
     return (
         <>
-            <motion.div style={{y, position: 'relative', zIndex: 15}}>
-                <Grid sx={{ position: 'relative',paddingTop: '40vh',  }}>
-                    <Grid sx={{position: 'absolute', width: '100%', minHeight: '100vh', backgroundColor: 'white'}} ref={sectionRef}>
+            {/* <motion.div style={{y, position: 'relative', zIndex: 15}}> */}
+                <Grid sx={{ position: 'relative',paddingTop: '0vh',  }}>
+                    <Grid sx={{position: 'relative', width: '100%', minHeight: '100vh', backgroundColor: 'white'}} ref={sectionRef}>
                         <Grid sx={{ }}>
                         <Grid container sx={{ backgroundColor: '#ecf0f1', justifyContent: 'center', marginTop: '100px', }}>
                             <Grid sx={{ maxWidth: '1200px' }} size={12}>
@@ -53,7 +53,7 @@ const OurImpact = ({ scrollY }) => {
                     </Grid>
                     </Grid>
                 </Grid>
-            </motion.div>
+            {/* </motion.div> */}
         </>
     )
 }

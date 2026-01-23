@@ -22,9 +22,8 @@ useLayoutEffect(() => {
     const y = useTransform(scrollY, [10*vh, 13*vh], [0, isMobileScreen ? -2.5*sectionHeight : isSmallScreen ? -3.6*sectionHeight : -2*sectionHeight]); 
 
     return (
-        <motion.div style={{y, position: 'fixed', zIndex: 21, marginTop: '10vh', top: 0, left: 0, width: '100%'}}>
-            <Grid container sx={{ marginTop: '100px', justifyContent: 'center', paddingTop: '0vh', minHeight: '100vh', }}>
-                <Grid sx={{position: 'absolute', backgroundColor: 'white', width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', }} ref={sectionRef}>
+            <Grid container sx={{ marginTop: '100px', justifyContent: 'center', paddingTop: '0vh', minHeight: '100vh', position: 'relative', zIndex: 25}}>
+                <Grid sx={{backgroundColor: 'white', width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', }} ref={sectionRef}>
                     {projectsData.map((project, index) => {
                         const isEven = index % 2 === 0;
                         return (
@@ -48,7 +47,6 @@ useLayoutEffect(() => {
                     })}
                 </Grid>
             </Grid>
-        </motion.div>
     )
 }
 

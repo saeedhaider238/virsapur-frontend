@@ -12,7 +12,7 @@ const AboutUs = () => {
   }, [])
 
   return (
-    <Grid container sx={{ minHeight: '100vh', padding: '150px 20px 150px 20px', display: 'flex', justifyContent: 'space-between', maxWidth: '1200px', alignItems: 'center' }} spacing={6} >
+    <Grid container sx={{ padding: '150px 20px 150px 20px', display: 'flex', justifyContent: 'space-between', maxWidth: '1200px', alignItems: 'center' }} spacing={6} >
       <Grid container sx={{ marginTop: '0px', justifyContent: 'center', paddingTop: '70px' }}>
             <Grid>
                 {trailsData.map((trail, index) => {

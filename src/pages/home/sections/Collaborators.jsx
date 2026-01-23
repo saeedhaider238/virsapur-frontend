@@ -63,9 +63,9 @@ const Collaborators = ({scrollY}) => {
             }
         `}</style>
 
-            <motion.div style={{y, position: 'fixed', zIndex: 17, top: 0, left: 0, width: '100%'}}>
+            <motion.div style={{y, position: 'relative', zIndex: 21, width: '100%',}}>
                 <Grid sx={{position: 'relative', }}>
-                    <Grid container sx={{ justifyContent: 'center', position: 'absolute', height: '100vh', width: '100%', backgroundColor: 'white', flexDirection: 'column'}}>
+                    <Grid container sx={{ justifyContent: 'center',  width: '100%', backgroundColor: 'white', flexDirection: 'column'}}>
                 <Grid container sx={{ justifyContent: 'center', overflow: 'hidden', }} size={12} ><h1 style={{
                     letterSpacing: !isMobileScreen ? '4px' : '0px', fontSize: !isMobileScreen ? '75px' : '40px', margin: '70px 0px', fontWeight: '100', textAlign: 'center', overflowWrap: 'break-word', wordBreak: 'break-word',
                     whiteSpace: 'normal',

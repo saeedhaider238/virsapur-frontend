@@ -17,7 +17,7 @@ const Courses = () => {
     <>
         <Navbar scrollY={scrollY} />
         <Hero scrollY={scrollY} /> 
-        <Grid sx={{ paddingTop: '60vh', display: 'flex', justifyContent: 'center', backgroundColor: '#fffdf1', }}>
+        <Grid sx={{ display: 'flex', justifyContent: 'center', backgroundColor: '#fffdf1', }}>
             <LearningHub scrollY={ scrollY } />
         </Grid>
         <Course />

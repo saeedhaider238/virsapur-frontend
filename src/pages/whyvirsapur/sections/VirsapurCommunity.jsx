@@ -11,9 +11,9 @@ const VirsapurCommunity = ({scrollY}) => {
     const y = useTransform(scrollY, [vh/2, vh], [0, -1 * vh]); 
     
     return (
-        <motion.div style={{y, position: 'relative', zIndex: 19, width: '100%'}}>
-            <Grid container sx={{ padding: '0px 20px 0px 20px', display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap-reverse', position: 'relative', marginTop: '50vh'}} spacing={!isSmallScreen ? 6 : 0} >
-                <Grid container sx={{width: '100%', justifyContent: 'center', position: 'absolute', backgroundColor: 'white', minHeight: '100vh', alignItems: 'center', padding: '0px 20px'}}>
+        // <motion.div style={{y, position: 'relative', zIndex: 19, width: '100%'}}>
+            <Grid container sx={{ padding: '100px 20px 0px 20px', display: 'flex', justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap-reverse', position: 'relative', marginTop: '0vh'}} spacing={!isSmallScreen ? 6 : 0} >
+                <Grid container sx={{width: '100%', justifyContent: 'center', position: 'relative', backgroundColor: 'white',  alignItems: 'center', padding: '0px 20px'}}>
                     <Grid container sx={{maxWidth: '1200px'}}>
                         <Grid item size={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 6 }} sx={{ display: 'flex', justifyContent: 'center' }}>
                     <Box
@@ -44,7 +44,7 @@ const VirsapurCommunity = ({scrollY}) => {
                     </Grid>
                 </Grid>
             </Grid>
-        </motion.div>
+        // </motion.div>
     )
 }
 

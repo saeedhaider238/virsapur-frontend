@@ -21,10 +21,10 @@ const MissionAndVision = ({ scrollY }) => {
 
     return (
         <>
-            <motion.div style={{ y, position: 'relative', zIndex: 17 }}>
-                <Grid sx={{ paddingTop: '40vh' }}>
+            {/* <motion.div style={{ y, position: 'relative', zIndex: 17 }}> */}
+                <Grid sx={{ paddingTop: '0vh' }}>
                     <Grid sx={{position: 'relative'}}>
-                        <Grid sx={{position: 'absolute', width: '100%', backgroundColor: 'white', minHeight: '100vh'}} ref={sectionRef}>
+                        <Grid sx={{width: '100%', backgroundColor: 'white',}} ref={sectionRef}>
                             <Grid container sx={{ backgroundColor: '#ecf0f1', justifyContent: 'center', marginTop: '100px', }}>
                                 <Grid sx={{ maxWidth: '1200px' }} size={12}>
                                     <Grid container sx={{ justifyContent: 'center' }}>
@@ -57,7 +57,7 @@ const MissionAndVision = ({ scrollY }) => {
                         </Grid>
                     </Grid>
                 </Grid>
-            </motion.div>
+            {/* </motion.div> */}
         </>
     )
 }

@@ -21,14 +21,6 @@ const Services = ({ scrollY }) => {
   const [vh, setVh] = useState(window.innerHeight);
   const y = useTransform(scrollY, [6*vh, 8*vh], [0, -1.2 * vh]); 
 
-  //   useEffect(() => {
-  //   if (isInView) {
-  //     console.log("Element is in view ✅");
-  //   } else {
-  //     console.log("Element is out of view ❌");
-  //   }
-  // }, [isInView]);
-
   const settings = {
     dots: false,
     infinite: true,
@@ -74,9 +66,8 @@ const Services = ({ scrollY }) => {
                 gap: 20px !important;
             }
             `}</style>
-      <motion.div style={{y, position: 'fixed', zIndex: 23, top: 0, left: 0, width: '100%'}}>
-        <Grid sx={{position: 'relative', backgroundColor: 'white'}}>
-        <Grid container sx={{ marginTop: '100px', paddingBottom: '70px', justifyContent: 'center', alignItems: 'center', zIndex: 1, width: '100%', backgroundColor: 'white', minHeight: '100vh'  }} ref={ref} >
+        <Grid sx={{position: 'relative', backgroundColor: 'white', zIndex: 27}}>
+        <Grid container sx={{ paddingTop: '100px', paddingBottom: '70px', justifyContent: 'center', alignItems: 'center', zIndex: 1, width: '100%', backgroundColor: 'white', minHeight: '100vh'  }} ref={ref} >
             <Grid container sx={{ justifyContent: 'center', zIndex: 0, }} ><h1 style={{ letterSpacing: '4px', margin: '70px 0px', fontSize: !isMobileScreen ? '80px' : '45px', fontWeight: '100', textAlign: 'center' }}>OUR SERVICES</h1></Grid>
             <Grid sx={{ overflow: 'hidden', zIndex: 0, alignSelf: 'flex-start' }} className='servicesCarrouselContainer'>
               <Slider key={`${isMobileScreen}`} {...settings}>
@@ -114,7 +105,6 @@ const Services = ({ scrollY }) => {
             </Grid>
           </Grid>
       </Grid>
-      </motion.div>
     </>
   )
 }
