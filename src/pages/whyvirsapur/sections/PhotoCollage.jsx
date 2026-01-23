@@ -25,7 +25,7 @@ const PhotoCollage = ({color='black'}) => {
         `}
       </style>
 
-      <Grid container sx={{justifyContent: 'center', overflow: 'hidden', paddingTop: '60vh', marginBottom: '100px', minHeight: '100vh'}}>
+      <Grid container sx={{justifyContent: 'center', overflow: 'hidden', paddingTop: '100px', marginBottom: '100px',}}>
         <Grid container sx={{maxWidth: '1200px', width: '100%', justifyContent: isMediumScreen ? 'center' : 'start', padding: '0px 20px', display: 'flex', alignItems: 'center'}}>
           {!isMediumScreen && <Grid sx={{margin: '0px 0px', overflow: 'hidden', height: '550px', backgroundColor: '#9697a9', }}>
             <Grid sx={{padding: '0px 10px', animation: 'starAnimation 100s ease-in-out infinite'}} className='slider'>

@@ -1,19 +1,14 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React from 'react'
 import Grid from '@mui/material/Grid';
 import LandingSectionBackground from '../../../assets/backgrounds/landingSectionBackground.mp4'
 import { useMediaQuery } from '@mui/material';
 import landingSectionBackgroundPoster from '../../../assets/backgrounds/landingSectionBackgroundPoster.jpg'
-import { motion, useScroll, useTransform } from "framer-motion";
 
 const Hero = ({scrollY}) => {
   const isMobileScreen = useMediaQuery('(max-width: 470px)')
-  const heroRef = useRef(null)
-  const [vh, setVh] = useState(window.innerHeight);
-  const y1 = useTransform(scrollY, [0, vh], [0, -1 * vh]); 
   
   return (
-    <motion.div style={{ y: y1}}>
-      <Grid sx={{ position: 'absolute', zIndex: 1, right: 0, width: '100%', backgroundImage: `url(${landingSectionBackgroundPoster})` }} ref={heroRef}>
+      <Grid sx={{ backgroundImage: `url(${landingSectionBackgroundPoster})` }} >
         <Grid container sx={{ overflow: 'hidden', height: '100vh', position: 'relative' }}>
           <Grid item sx={{ overflow: 'hidden', display: 'flex', justifyContent: 'center', position: 'absolute', zIndex: '-1', width: '100%', height: '100%' }}>
             <video src={LandingSectionBackground} autoPlay loop muted style={{ width: '100%', minWidth: '1400px', objectFit: 'cover' }} poster={landingSectionBackgroundPoster} ></video>
@@ -24,7 +19,6 @@ const Hero = ({scrollY}) => {
           </Grid>
         </Grid>
       </Grid>
-    </motion.div>
   )
 }
 

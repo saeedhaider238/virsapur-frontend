@@ -11,8 +11,7 @@ const ProjectsTitle = ({scrollY}) => {
     const y = useTransform(scrollY, [8*vh, 10*vh], [0, -1 * vh]); 
 
   return (
-    <motion.div style={{ y, backgroundColor: 'white', position: 'fixed', top: 0, left: 0, width: '100%', zIndex: 22, marginTop: '0vh' }}>
-      <Grid container sx={{ marginTop: '100px', height: '100vh', position: 'absolute', right: 0, width: '100%', zIndex: 0,  }}>
+      <Grid container sx={{ marginTop: '100px', height: '100vh', position: 'relative', right: 0, width: '100%', zIndex: 26,  }}>
         <Grid item sx={{ overflow: 'hidden', display: 'flex', justifyContent: 'center', position: 'absolute', zIndex: '-1', width: '100%', height: '100%' }}>
           <video src={ProductsSectionBackground} autoPlay loop muted style={{ width: '100%', minWidth: '1400px', objectFit: 'cover' }} poster={productsSectionBackgroundPoster} ></video>
         </Grid>
@@ -20,7 +19,6 @@ const ProjectsTitle = ({scrollY}) => {
           <h1 style={{ letterSpacing: '4px', fontWeight: '100', fontSize: !isMobileScreen ? '80px' : '55px', textAlign: 'center' }}>OUR PROJECTS</h1>
         </Grid>
       </Grid>
-    </motion.div>
   )
 }
 

@@ -13,9 +13,8 @@ const Founders = ({scrollY}) => {
 
   return (
     <>
-    <motion.div style={{ y, backgroundColor: 'white', zIndex: 24, position: 'fixed',left: 0, top: 0, width: '100%' }}>
-      <Grid container sx={{ minHeight: '100vh', justifyContent: 'center', alignItems: 'center', padding: `${isSmallMobileScreen ? '100vh' : isMobileScreen ? '55vh' : isSmallScreen ? '100vh' : '10vh'} 0px 0px 0px`, zIndex: 2, position: 'relative', backgroundColor: 'white'}}>
-        <Grid sx={{position: 'absolute', backgroundColor: 'white', zIndex: 2,}}>
+      <Grid container sx={{ justifyContent: 'center', alignItems: 'center', padding: `0px 0px 0px 0px`, position: 'relative', backgroundColor: 'white', zIndex: 28}}>
+        <Grid sx={{backgroundColor: 'white', zIndex: 2,}}>
           <Grid container sx={{ justifyContent: 'center' }}><h1 style={{ letterSpacing: '4px', margin: '70px 0px', fontSize: !isMobileScreen ? '80px' : '45px', fontWeight: '100',  }}>FOUNDERS</h1></Grid>
           {foundersData.map((founder, index) => {
             const isEven = index % 2 === 0;
@@ -41,7 +40,6 @@ const Founders = ({scrollY}) => {
           })}
         </Grid>
       </Grid>
-    </motion.div>
     </>
   )
 }
