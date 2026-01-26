@@ -380,5 +380,73 @@ const coursesData = [
   },
 ];
 
+const blogCategories = [
+    {
+        title: "Heritage sites",
+        image: Workshop1
+    },
+     {
+        title: "Heritage sites",
+        image: Workshop1
+    },
+     {
+        title: "Heritage sites",
+        image: Workshop1
+    },
+     {
+        title: "Heritage sites",
+        image: Workshop1
+    },
+     {
+        title: "Heritage sites",
+        image: Workshop1
+    },
+     {
+        title: "Heritage sites",
+        image: Workshop1
+    },
+     {
+        title: "Heritage sites",
+        image: Workshop1
+    },
+];
+const BlogContent = [
+  {
+    title: "Heritage Walks",
+    category: "Culture",
+    text: "Explore hidden historical gems in your city.",
+    path: "/blog/heritage-walk",
+    image: Workshop2,
+    location: {
+        title: 'something',
+        url: 'xyz',
+    }
+  },
+  {
+    title: "Art Workshops",
+    category: "Art",
+    text: "Learn painting techniques with experts.",
+    path: "/blog/art-workshop",
+    image: Workshop2,
+     location: {
+        title: 'something',
+        url: 'xyz',
+    }
+  },
+  {
+    title: "Community Projects",
+    category: "Social",
+    text: "Participate in local community impact initiatives.",
+    path: "/blog/community-project",
+    image: Workshop2,
+     location: {
+        title: 'something',
+        url: 'xyz',
+    }
+  },
+];
 
-export {foundersData, servicesData, projectsData, heritageData, feedbackData, collaboratorsData, trailsData, workshopData, coursesData}
+
+
+
+export {foundersData, servicesData, projectsData, heritageData, feedbackData, collaboratorsData, trailsData, workshopData, coursesData,blogCategories,BlogContent}
