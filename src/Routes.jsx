@@ -11,6 +11,7 @@ import WhyVirsapur from './pages/whyvirsapur/WhyVirsapur'
 import Courses from './pages/courses/Courses.jsx'
 import Course from './pages/course/Course.jsx';
 import Blogs from './pages/blogs/Blogs.jsx';
+import Blog from './pages/blog/Blog.jsx'
 
 const Router = () => {
   return (
@@ -27,6 +28,7 @@ const Router = () => {
       <Route path='/trail/:trailPath' element={<Trail />} />
       <Route path='/workshop/:workshopPath' element={<Workshop />} />
       <Route path='/course/:coursePath' element={<Course />} />
+      <Route path='/blog/:blogPath' element={<Blog />} />
       
     </Routes>
   )
