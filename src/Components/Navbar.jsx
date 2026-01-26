@@ -13,7 +13,7 @@ const menuItems = [
   { text: "Courses", path: '/courses' },
   { text: "Why Virsapur!", path: "/why-virsapur" },
   { text: "Bookings", path: "/bookings" },
-  { text: "Blog", path: "/blog" },
+  { text: "Blogs", path: "/blogs" },
 ];
 
 const Navbar = ({scrollY}) => {
