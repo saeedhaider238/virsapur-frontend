@@ -18,6 +18,14 @@ import DelhiGate from './assets/heritage/DelhiGate.png'
 //feedback data
 import feedback1 from './assets/feedback/feedback1.png'
 import feedback2 from './assets/feedback/feedback2.png'
+import logocolab1 from './assets/feedback/logocolab1.png'
+import logocolab2 from './assets/feedback/logocolab2.png'
+import logocolab3 from './assets/feedback/logocolab3.png'
+import logocolab4 from './assets/feedback/logocolab4.png'
+import logocolab5 from './assets/feedback/logocolab5.png'
+import logocolab6 from './assets/feedback/logocolab6.png'
+import logocolab7 from './assets/feedback/logocolab7.png'
+import logocolab8 from './assets/feedback/logocolab8.png'
 
 // workshop data
 import Workshop1 from './assets/workshops/Workshop1.png'
@@ -130,7 +138,7 @@ const feedbackData = [
     },
     {
         name: 'Burnt Brains Team',
-        image: feedback1,
+        image: feedback2,
         review: 'The tour team was professional, friendly, and made the entire experience seamless and enjoyable.',
         path: '/heritage/project3'
     },
@@ -146,27 +154,51 @@ const feedbackData = [
 const collaboratorsData = [
     {
         name: 'Burnt Brains Team',
-        image: feedback1,
+        image: logocolab1,
         review: 'The tour team was professional, friendly, and made the entire experience seamless and enjoyable.',
         path: '/heritage/project1'
     },
     {
         name: 'Burnt Brains Team',
-        image: feedback2,
+        image: logocolab2,
         review: 'The tour team was professional, friendly, and made the entire experience seamless and enjoyable.',
         path: '/heritage/project2'
     },
     {
         name: 'Burnt Brains Team',
-        image: feedback1,
+        image: logocolab3,
         review: 'The tour team was professional, friendly, and made the entire experience seamless and enjoyable.',
         path: '/heritage/project3'
     },
     {
         name: 'Burnt Brains Team',
-        image: feedback2,
+        image: logocolab4,
         review: 'The tour team was professional, friendly, and made the entire experience seamless and enjoyable.',
-        path: '/heritage/project3'
+        path: '/heritage/project4'
+    },
+     {
+        name: 'Burnt Brains Team',
+        image: logocolab5,
+        review: 'The tour team was professional, friendly, and made the entire experience seamless and enjoyable.',
+        path: '/heritage/project5'
+    },
+     {
+        name: 'Burnt Brains Team',
+        image: logocolab6,
+        review: 'The tour team was professional, friendly, and made the entire experience seamless and enjoyable.',
+        path: '/heritage/project6'
+    },
+     {
+        name: 'Burnt Brains Team',
+        image: logocolab7,
+        review: 'The tour team was professional, friendly, and made the entire experience seamless and enjoyable.',
+        path: '/heritage/project7'
+    },
+     {
+        name: 'Burnt Brains Team',
+        image: logocolab8,
+        review: 'The tour team was professional, friendly, and made the entire experience seamless and enjoyable.',
+        path: '/heritage/project8'
     },
 ]
 
@@ -438,15 +470,20 @@ const BlogContent = [
     category: "Social",
     text: "Participate in local community impact initiatives.",
     path: "/blog/community-project",
-    image: Workshop2,
+    image: Workshop1,
      location: {
         title: 'something',
         url: 'xyz',
     }
   },
 ];
+const socialLinks = [
+  { name: 'Instagram', icon: 'instagram', url: 'https://instagram.com/fake' },
+  { name: 'Facebook', icon: 'facebook', url: 'https://facebook.com/fake' },
+  { name: 'TikTok', icon: 'tiktok', url: 'https://tiktok.com/fake' },
+];
 
 
 
 
-export {foundersData, servicesData, projectsData, heritageData, feedbackData, collaboratorsData, trailsData, workshopData, coursesData,blogCategories,BlogContent}
+export {foundersData, servicesData, projectsData, heritageData, feedbackData, collaboratorsData, trailsData, workshopData, coursesData,blogCategories,BlogContent,socialLinks}

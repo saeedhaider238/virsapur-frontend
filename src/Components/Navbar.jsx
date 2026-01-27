@@ -16,7 +16,7 @@ const menuItems = [
   { text: "Blogs", path: "/blogs" },
 ];
 
-const Navbar = ({scrollY}) => {
+const Navbar = ({scrollY }) => {
   const isSmallScreen = useMediaQuery('(max-width: 900px)')
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [vh, setVh] = useState(window.innerHeight);

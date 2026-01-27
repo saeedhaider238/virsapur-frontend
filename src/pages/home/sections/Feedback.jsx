@@ -91,7 +91,7 @@ const Feedback = ({ scrollY }) => {
                     <p>{feedback.review}</p>
                   </div>
 
-                  <img src={feedback.image} alt={feedback.title} style={{ width: "100%", borderRadius: "10px" }} />
+                  <img src={feedback.image} alt={feedback.title} style={{ width: "100%",height:"300px", borderRadius: "10px" }} />
                 </div>
               ))}
             </Slider>
