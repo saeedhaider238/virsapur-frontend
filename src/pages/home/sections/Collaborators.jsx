@@ -75,7 +75,7 @@ const Collaborators = ({scrollY}) => {
                     <Slider key={`${isMobileScreen}`} {...settings}>
                         {[...collaboratorsData, ...collaboratorsData].map((feedback, index) => (
                             <div key={index} style={{ padding: "0px", position: 'relative', }} className='slide-card'>
-                                <img src={feedback.image} alt={feedback.title} style={{ width: "100%", borderRadius: "10px" }} />
+                                <img src={feedback.image} alt={feedback.title} style={{ width: "100%",height:"300px", borderRadius: "10px" }} />
                             </div>
                         ))}
                     </Slider>
