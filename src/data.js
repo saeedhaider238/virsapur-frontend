@@ -483,7 +483,37 @@ const socialLinks = [
   { name: 'TikTok', icon: 'tiktok', url: 'https://tiktok.com/fake' },
 ];
 
+const bookingDetails = [
+    {
+      id: 1,
+      title: 'Trails Experience',
+      image: WorkshopImpact1,
+      price: '$20',
+      participants: 40,
+      dates: ['12 Aug 2025', '18 Aug 2025'],
+      path: '/checkout/trails',
+    },
+    {
+      id: 2,
+      title: 'Workshop Session',
+      image: WorkshopImpact1,
+      price: '$50',
+      participants: 30,
+      dates: ['15 Aug 2025', '22 Aug 2025'],
+      path: '/checkout/workshop',
+    },
+    {
+      id: 3,
+      title: 'Special Experience',
+      image: WorkshopImpact1,
+      price: '$80',
+      participants: 20,
+      dates: ['20 Aug 2025'],
+      path: '/checkout/special',
+    },
+  ];
 
 
 
-export {foundersData, servicesData, projectsData, heritageData, feedbackData, collaboratorsData, trailsData, workshopData, coursesData,blogCategories,BlogContent,socialLinks}
+
+export {foundersData, servicesData, projectsData, heritageData, feedbackData, collaboratorsData, trailsData, workshopData, coursesData,blogCategories,BlogContent,socialLinks,bookingDetails}
