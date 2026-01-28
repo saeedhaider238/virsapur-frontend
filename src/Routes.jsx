@@ -12,6 +12,7 @@ import Courses from './pages/courses/Courses.jsx'
 import Course from './pages/course/Course.jsx';
 import Blogs from './pages/blogs/Blogs.jsx';
 import Blog from './pages/blog/Blog.jsx'
+import Bookings from './pages/bookings/Bookings.jsx';
 
 const Router = () => {
   return (
@@ -22,6 +23,7 @@ const Router = () => {
       <Route path="/workshops" element={<Workshops />} />      
       <Route path="/courses" element={<Courses />} />
       <Route path="/why-virsapur" element={<WhyVirsapur />} />
+      <Route path="/bookings" element={<Bookings />} /> 
       <Route path="/blogs" element={<Blogs />} /> 
       <Route path="/service/:servicePath" element={<Service />} />
       <Route path="/heritage/:heritagePath" element={<Heritage />} />
