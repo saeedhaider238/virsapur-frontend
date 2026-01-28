@@ -13,6 +13,7 @@ import Course from './pages/course/Course.jsx';
 import Blogs from './pages/blogs/Blogs.jsx';
 import Blog from './pages/blog/Blog.jsx'
 import Bookings from './pages/bookings/Bookings.jsx';
+import Checkout from './pages/checkout/Checkout.jsx';
 
 const Router = () => {
   return (
@@ -31,6 +32,7 @@ const Router = () => {
       <Route path='/workshop/:workshopPath' element={<Workshop />} />
       <Route path='/course/:coursePath' element={<Course />} />
       <Route path='/blog/:blogPath' element={<Blog />} />
+      <Route path="/checkout/:bookingPath" element={<Checkout />} />
       
     </Routes>
   )
